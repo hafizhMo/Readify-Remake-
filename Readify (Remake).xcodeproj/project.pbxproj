@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FB4300012A9CF9DA00788636 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB4300002A9CF9DA00788636 /* Assets.xcassets */; };
 		FB4300042A9CF9DA00788636 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB4300032A9CF9DA00788636 /* Preview Assets.xcassets */; };
+		FB43000B2A9CFA0A00788636 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FB43000A2A9CFA0A00788636 /* README.md */; };
 		FB43FFFD2A9CF9D900788636 /* Readify__Remake_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB43FFFC2A9CF9D900788636 /* Readify__Remake_App.swift */; };
 		FB43FFFF2A9CF9D900788636 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB43FFFE2A9CF9D900788636 /* ContentView.swift */; };
 /* End PBXBuildFile section */
@@ -16,6 +17,7 @@
 /* Begin PBXFileReference section */
 		FB4300002A9CF9DA00788636 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB4300032A9CF9DA00788636 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FB43000A2A9CFA0A00788636 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FB43FFF92A9CF9D800788636 /* Readify (Remake).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Readify (Remake).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB43FFFC2A9CF9D900788636 /* Readify__Remake_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Readify__Remake_App.swift; sourceTree = "<group>"; };
 		FB43FFFE2A9CF9D900788636 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -43,6 +45,7 @@
 		FB43FFF02A9CF9D800788636 = {
 			isa = PBXGroup;
 			children = (
+				FB43000A2A9CFA0A00788636 /* README.md */,
 				FB43FFFB2A9CF9D800788636 /* Readify (Remake) */,
 				FB43FFFA2A9CF9D800788636 /* Products */,
 			);
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB43000B2A9CFA0A00788636 /* README.md in Resources */,
 				FB4300042A9CF9DA00788636 /* Preview Assets.xcassets in Resources */,
 				FB4300012A9CF9DA00788636 /* Assets.xcassets in Resources */,
 			);
