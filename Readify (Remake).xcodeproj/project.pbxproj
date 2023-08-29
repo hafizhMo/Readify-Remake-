@@ -9,14 +9,19 @@
 /* Begin PBXBuildFile section */
 		FB4300192A9E4D6300788636 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4300182A9E4D6300788636 /* AppDelegate.swift */; };
 		FB43001B2A9E4D6300788636 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB43001A2A9E4D6300788636 /* SceneDelegate.swift */; };
-		FB43001D2A9E4D6300788636 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB43001C2A9E4D6300788636 /* ViewController.swift */; };
-		FB4300202A9E4D6300788636 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB43001E2A9E4D6300788636 /* Main.storyboard */; };
 		FB4300222A9E4D6400788636 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB4300212A9E4D6400788636 /* Assets.xcassets */; };
 		FB4300252A9E4D6400788636 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB4300232A9E4D6400788636 /* LaunchScreen.storyboard */; };
 		FB4300302A9E4D6400788636 /* Readify__Remake_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB43002F2A9E4D6400788636 /* Readify__Remake_Tests.swift */; };
 		FB43003A2A9E4D6400788636 /* Readify__Remake_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4300392A9E4D6400788636 /* Readify__Remake_UITests.swift */; };
 		FB43003C2A9E4D6400788636 /* Readify__Remake_UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB43003B2A9E4D6400788636 /* Readify__Remake_UITestsLaunchTests.swift */; };
 		FB4300492A9E4DC700788636 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FB4300482A9E4DC700788636 /* README.md */; };
+		FB4300522A9E51AF00788636 /* FocusReading.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB4300512A9E51AF00788636 /* FocusReading.storyboard */; };
+		FB4300592A9E56A100788636 /* CurrentGoalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4300532A9E56A100788636 /* CurrentGoalPresenter.swift */; };
+		FB43005A2A9E56A100788636 /* CurrentGoalWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4300542A9E56A100788636 /* CurrentGoalWorker.swift */; };
+		FB43005B2A9E56A100788636 /* CurrentGoalRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4300552A9E56A100788636 /* CurrentGoalRouter.swift */; };
+		FB43005C2A9E56A100788636 /* CurrentGoalModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4300562A9E56A100788636 /* CurrentGoalModels.swift */; };
+		FB43005D2A9E56A100788636 /* CurrentGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4300572A9E56A100788636 /* CurrentGoalViewController.swift */; };
+		FB43005E2A9E56A100788636 /* CurrentGoalInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4300582A9E56A100788636 /* CurrentGoalInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +45,6 @@
 		FB4300152A9E4D6300788636 /* Readify (Remake).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Readify (Remake).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB4300182A9E4D6300788636 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB43001A2A9E4D6300788636 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FB43001C2A9E4D6300788636 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FB43001F2A9E4D6300788636 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB4300212A9E4D6400788636 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB4300242A9E4D6400788636 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB4300262A9E4D6400788636 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +54,13 @@
 		FB4300392A9E4D6400788636 /* Readify__Remake_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Readify__Remake_UITests.swift; sourceTree = "<group>"; };
 		FB43003B2A9E4D6400788636 /* Readify__Remake_UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Readify__Remake_UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FB4300482A9E4DC700788636 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FB4300512A9E51AF00788636 /* FocusReading.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FocusReading.storyboard; sourceTree = "<group>"; };
+		FB4300532A9E56A100788636 /* CurrentGoalPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentGoalPresenter.swift; sourceTree = "<group>"; };
+		FB4300542A9E56A100788636 /* CurrentGoalWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentGoalWorker.swift; sourceTree = "<group>"; };
+		FB4300552A9E56A100788636 /* CurrentGoalRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentGoalRouter.swift; sourceTree = "<group>"; };
+		FB4300562A9E56A100788636 /* CurrentGoalModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentGoalModels.swift; sourceTree = "<group>"; };
+		FB4300572A9E56A100788636 /* CurrentGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentGoalViewController.swift; sourceTree = "<group>"; };
+		FB4300582A9E56A100788636 /* CurrentGoalInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentGoalInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,10 +112,9 @@
 		FB4300172A9E4D6300788636 /* Readify (Remake) */ = {
 			isa = PBXGroup;
 			children = (
+				FB43004A2A9E4E0C00788636 /* Domain */,
 				FB4300182A9E4D6300788636 /* AppDelegate.swift */,
 				FB43001A2A9E4D6300788636 /* SceneDelegate.swift */,
-				FB43001C2A9E4D6300788636 /* ViewController.swift */,
-				FB43001E2A9E4D6300788636 /* Main.storyboard */,
 				FB4300212A9E4D6400788636 /* Assets.xcassets */,
 				FB4300232A9E4D6400788636 /* LaunchScreen.storyboard */,
 				FB4300262A9E4D6400788636 /* Info.plist */,
@@ -128,6 +137,68 @@
 				FB43003B2A9E4D6400788636 /* Readify__Remake_UITestsLaunchTests.swift */,
 			);
 			path = "Readify (Remake)UITests";
+			sourceTree = "<group>";
+		};
+		FB43004A2A9E4E0C00788636 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				FB43004B2A9E4E4000788636 /* FocusReading */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		FB43004B2A9E4E4000788636 /* FocusReading */ = {
+			isa = PBXGroup;
+			children = (
+				FB4300512A9E51AF00788636 /* FocusReading.storyboard */,
+				FB43004C2A9E4E8400788636 /* Scenes */,
+			);
+			path = FocusReading;
+			sourceTree = "<group>";
+		};
+		FB43004C2A9E4E8400788636 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				FB43004E2A9E4E9800788636 /* CreateGoal */,
+				FB4300502A9E4EC200788636 /* FocusMode */,
+				FB43004D2A9E4E8B00788636 /* CurrentGoal */,
+				FB43004F2A9E4EB200788636 /* UpdateGoal */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		FB43004D2A9E4E8B00788636 /* CurrentGoal */ = {
+			isa = PBXGroup;
+			children = (
+				FB4300582A9E56A100788636 /* CurrentGoalInteractor.swift */,
+				FB4300562A9E56A100788636 /* CurrentGoalModels.swift */,
+				FB4300532A9E56A100788636 /* CurrentGoalPresenter.swift */,
+				FB4300552A9E56A100788636 /* CurrentGoalRouter.swift */,
+				FB4300572A9E56A100788636 /* CurrentGoalViewController.swift */,
+				FB4300542A9E56A100788636 /* CurrentGoalWorker.swift */,
+			);
+			path = CurrentGoal;
+			sourceTree = "<group>";
+		};
+		FB43004E2A9E4E9800788636 /* CreateGoal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CreateGoal;
+			sourceTree = "<group>";
+		};
+		FB43004F2A9E4EB200788636 /* UpdateGoal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UpdateGoal;
+			sourceTree = "<group>";
+		};
+		FB4300502A9E4EC200788636 /* FocusMode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FocusMode;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,10 +305,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB4300522A9E51AF00788636 /* FocusReading.storyboard in Resources */,
 				FB4300252A9E4D6400788636 /* LaunchScreen.storyboard in Resources */,
 				FB4300222A9E4D6400788636 /* Assets.xcassets in Resources */,
 				FB4300492A9E4DC700788636 /* README.md in Resources */,
-				FB4300202A9E4D6300788636 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,9 +333,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB43001D2A9E4D6300788636 /* ViewController.swift in Sources */,
+				FB4300592A9E56A100788636 /* CurrentGoalPresenter.swift in Sources */,
 				FB4300192A9E4D6300788636 /* AppDelegate.swift in Sources */,
+				FB43005C2A9E56A100788636 /* CurrentGoalModels.swift in Sources */,
+				FB43005B2A9E56A100788636 /* CurrentGoalRouter.swift in Sources */,
+				FB43005D2A9E56A100788636 /* CurrentGoalViewController.swift in Sources */,
+				FB43005A2A9E56A100788636 /* CurrentGoalWorker.swift in Sources */,
 				FB43001B2A9E4D6300788636 /* SceneDelegate.swift in Sources */,
+				FB43005E2A9E56A100788636 /* CurrentGoalInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,14 +377,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FB43001E2A9E4D6300788636 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FB43001F2A9E4D6300788636 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FB4300232A9E4D6400788636 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -446,7 +514,7 @@
 				INFOPLIST_FILE = "Readify (Remake)/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = FocusReading;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -474,7 +542,7 @@
 				INFOPLIST_FILE = "Readify (Remake)/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = FocusReading;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
