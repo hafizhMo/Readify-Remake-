@@ -4,7 +4,7 @@ This app is remake from [Readify](https://github.com/reinabil/Atomic.git) by Ato
 Readify is a native iOS App that solves college student reading habit by building and maintaining consistent reading habit for students that have interest in books by setting their goals and tracking their reading progress.
 
 ## Tech Stack
-- SwiftUI🆕
+- UIKit (Storyboard + Xib)
 - UserDefault
 - VIP🆕
 - Unit Testing🆕
