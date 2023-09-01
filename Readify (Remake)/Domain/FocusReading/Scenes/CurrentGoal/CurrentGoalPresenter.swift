@@ -20,7 +20,7 @@ class CurrentGoalPresenter: CurrentGoalPresentationLogic {
   var viewController: CurrentGoalDisplayLogic?
   
   func presentGoal(response: CurrentGoal.ShowGoal.Response) {
-    if let title = response.title, let progress = response.progress, let total = response.total {
+    if let title = response.title, !title.isEmpty, let progress = response.progress, let total = response.total {
       let percentage = Double(total / progress)
       let progressStr = "\(progress)/\(total)"
       

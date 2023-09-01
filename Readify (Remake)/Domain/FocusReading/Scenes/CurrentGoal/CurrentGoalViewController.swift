@@ -20,8 +20,6 @@ protocol CurrentGoalDisplayLogic {
 class CurrentGoalViewController: UIViewController, CurrentGoalDisplayLogic {
   var interactor: CurrentGoalBusinessLogic?
   var router: (NSObjectProtocol & CurrentGoalRoutingLogic & CurrentGoalDataPassing)?
-
-  // MARK: Object lifecycle
   
   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
     super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -32,8 +30,6 @@ class CurrentGoalViewController: UIViewController, CurrentGoalDisplayLogic {
     super.init(coder: aDecoder)
     setup()
   }
-  
-  // MARK: Setup
   
   private func setup() {
     let viewController = self
@@ -63,12 +59,31 @@ class CurrentGoalViewController: UIViewController, CurrentGoalDisplayLogic {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-//    doSomething()
+    doSomething()
   }
   
-  // MARK: Do something
+  @IBOutlet weak var circularProgressBar: UIView!
   
-  //@IBOutlet weak var nameTextField: UITextField!
+  @IBOutlet weak var progressByPagesLabel: UILabel!
+  @IBOutlet weak var bookTitleLabel: UILabel!
+  @IBOutlet weak var progressPercentageLabel: UILabel!
+  @IBOutlet weak var yourProgressLabel: UILabel!
+  @IBOutlet weak var dayAndWeekStreakLabel: UILabel!
+  
+  @IBOutlet weak var currentGoalView: UIView!
+  @IBOutlet weak var emptyGoalView: UIView!
+  
+  @IBAction func didSetNewGoalTapped(_ sender: Any) {
+  }
+  
+  @IBAction func didContinueReadingTapped(_ sender: Any) {
+  }
+  
+  @IBAction func didEditGoalTapped(_ sender: Any) {
+  }
+  
+  @IBAction func didCompleteTapped(_ sender: Any) {
+  }
   
   func doSomething() {
     let request = CurrentGoal.ShowGoal.Request()
@@ -76,10 +91,14 @@ class CurrentGoalViewController: UIViewController, CurrentGoalDisplayLogic {
   }
   
   func displayGoal(viewModel: CurrentGoal.ShowGoal.ViewModel) {
-    
+    yourProgressLabel.isHidden = false
+    currentGoalView.isHidden = false
+    emptyGoalView.isHidden = true
   }
   
   func displayPlaceholder() {
-    
+    yourProgressLabel.isHidden = true
+    currentGoalView.isHidden = true
+    emptyGoalView.isHidden = false
   }
 }
