@@ -23,6 +23,7 @@
 		FB43005D2A9E56A100788636 /* CurrentGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4300572A9E56A100788636 /* CurrentGoalViewController.swift */; };
 		FB43005E2A9E56A100788636 /* CurrentGoalInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4300582A9E56A100788636 /* CurrentGoalInteractor.swift */; };
 		FBD84EBA2AA37F2800042FBF /* CreateGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD84EB92AA37F2800042FBF /* CreateGoalViewController.swift */; };
+		FBD84EBC2AA3852800042FBF /* FocusModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD84EBB2AA3852800042FBF /* FocusModeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		FB4300572A9E56A100788636 /* CurrentGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentGoalViewController.swift; sourceTree = "<group>"; };
 		FB4300582A9E56A100788636 /* CurrentGoalInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentGoalInteractor.swift; sourceTree = "<group>"; };
 		FBD84EB92AA37F2800042FBF /* CreateGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoalViewController.swift; sourceTree = "<group>"; };
+		FBD84EBB2AA3852800042FBF /* FocusModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusModeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +202,7 @@
 		FB4300502A9E4EC200788636 /* FocusMode */ = {
 			isa = PBXGroup;
 			children = (
+				FBD84EBB2AA3852800042FBF /* FocusModeViewController.swift */,
 			);
 			path = FocusMode;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 			files = (
 				FB4300592A9E56A100788636 /* CurrentGoalPresenter.swift in Sources */,
 				FB4300192A9E4D6300788636 /* AppDelegate.swift in Sources */,
+				FBD84EBC2AA3852800042FBF /* FocusModeViewController.swift in Sources */,
 				FB43005C2A9E56A100788636 /* CurrentGoalModels.swift in Sources */,
 				FB43005B2A9E56A100788636 /* CurrentGoalRouter.swift in Sources */,
 				FB43005D2A9E56A100788636 /* CurrentGoalViewController.swift in Sources */,
