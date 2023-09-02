@@ -22,6 +22,7 @@
 		FB43005C2A9E56A100788636 /* CurrentGoalModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4300562A9E56A100788636 /* CurrentGoalModels.swift */; };
 		FB43005D2A9E56A100788636 /* CurrentGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4300572A9E56A100788636 /* CurrentGoalViewController.swift */; };
 		FB43005E2A9E56A100788636 /* CurrentGoalInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4300582A9E56A100788636 /* CurrentGoalInteractor.swift */; };
+		FBD84EBA2AA37F2800042FBF /* CreateGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD84EB92AA37F2800042FBF /* CreateGoalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		FB4300562A9E56A100788636 /* CurrentGoalModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentGoalModels.swift; sourceTree = "<group>"; };
 		FB4300572A9E56A100788636 /* CurrentGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentGoalViewController.swift; sourceTree = "<group>"; };
 		FB4300582A9E56A100788636 /* CurrentGoalInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentGoalInteractor.swift; sourceTree = "<group>"; };
+		FBD84EB92AA37F2800042FBF /* CreateGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 		FB43004E2A9E4E9800788636 /* CreateGoal */ = {
 			isa = PBXGroup;
 			children = (
+				FBD84EB92AA37F2800042FBF /* CreateGoalViewController.swift */,
 			);
 			path = CreateGoal;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				FB43005D2A9E56A100788636 /* CurrentGoalViewController.swift in Sources */,
 				FB43005A2A9E56A100788636 /* CurrentGoalWorker.swift in Sources */,
 				FB43001B2A9E4D6300788636 /* SceneDelegate.swift in Sources */,
+				FBD84EBA2AA37F2800042FBF /* CreateGoalViewController.swift in Sources */,
 				FB43005E2A9E56A100788636 /* CurrentGoalInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
