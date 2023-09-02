@@ -24,6 +24,7 @@
 		FB43005E2A9E56A100788636 /* CurrentGoalInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4300582A9E56A100788636 /* CurrentGoalInteractor.swift */; };
 		FBD84EBA2AA37F2800042FBF /* CreateGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD84EB92AA37F2800042FBF /* CreateGoalViewController.swift */; };
 		FBD84EBC2AA3852800042FBF /* FocusModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD84EBB2AA3852800042FBF /* FocusModeViewController.swift */; };
+		FBD84EBE2AA38B4F00042FBF /* CompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD84EBD2AA38B4F00042FBF /* CompleteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		FB4300582A9E56A100788636 /* CurrentGoalInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentGoalInteractor.swift; sourceTree = "<group>"; };
 		FBD84EB92AA37F2800042FBF /* CreateGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoalViewController.swift; sourceTree = "<group>"; };
 		FBD84EBB2AA3852800042FBF /* FocusModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusModeViewController.swift; sourceTree = "<group>"; };
+		FBD84EBD2AA38B4F00042FBF /* CompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,7 +168,7 @@
 				FB43004E2A9E4E9800788636 /* CreateGoal */,
 				FB4300502A9E4EC200788636 /* FocusMode */,
 				FB43004D2A9E4E8B00788636 /* CurrentGoal */,
-				FB43004F2A9E4EB200788636 /* UpdateGoal */,
+				FB43004F2A9E4EB200788636 /* Complete */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -192,11 +194,12 @@
 			path = CreateGoal;
 			sourceTree = "<group>";
 		};
-		FB43004F2A9E4EB200788636 /* UpdateGoal */ = {
+		FB43004F2A9E4EB200788636 /* Complete */ = {
 			isa = PBXGroup;
 			children = (
+				FBD84EBD2AA38B4F00042FBF /* CompleteViewController.swift */,
 			);
-			path = UpdateGoal;
+			path = Complete;
 			sourceTree = "<group>";
 		};
 		FB4300502A9E4EC200788636 /* FocusMode */ = {
@@ -345,6 +348,7 @@
 				FB43005C2A9E56A100788636 /* CurrentGoalModels.swift in Sources */,
 				FB43005B2A9E56A100788636 /* CurrentGoalRouter.swift in Sources */,
 				FB43005D2A9E56A100788636 /* CurrentGoalViewController.swift in Sources */,
+				FBD84EBE2AA38B4F00042FBF /* CompleteViewController.swift in Sources */,
 				FB43005A2A9E56A100788636 /* CurrentGoalWorker.swift in Sources */,
 				FB43001B2A9E4D6300788636 /* SceneDelegate.swift in Sources */,
 				FBD84EBA2AA37F2800042FBF /* CreateGoalViewController.swift in Sources */,

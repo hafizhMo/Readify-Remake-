@@ -177,6 +177,7 @@
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="didCompleteTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="wGj-KG-U1x"/>
+                                                    <segue destination="ioY-PH-fsV" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="coverVertical" id="Eav-eu-WBq"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -324,7 +325,7 @@
                                 </items>
                             </navigationBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="bdw-Pd-uES">
-                                <rect key="frame" x="20" y="76" width="353" height="601.66666666666663"/>
+                                <rect key="frame" x="20" y="76" width="353" height="613.66666666666663"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Reading" translatesAutoresizingMaskIntoConstraints="NO" id="7mh-GU-IKx">
                                         <rect key="frame" x="20" y="32" width="313" height="252"/>
@@ -385,7 +386,7 @@
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <edgeInsets key="layoutMargins" top="32" left="20" bottom="20" right="20"/>
+                                <edgeInsets key="layoutMargins" top="32" left="20" bottom="32" right="20"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -409,7 +410,111 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9FR-Js-PBL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117" y="899"/>
+            <point key="canvasLocation" x="27" y="899"/>
+        </scene>
+        <!--Complete View Controller-->
+        <scene sceneID="2iT-BL-jPV">
+            <objects>
+                <viewController id="ioY-PH-fsV" customClass="CompleteViewController" customModule="Readify__Remake_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4fF-bb-HFw">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gqn-tK-DHh">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem title="Congrats! 🎉" id="05T-Na-ZLQ"/>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lRq-tf-mCg">
+                                <rect key="frame" x="0.0" y="44" width="393" height="808"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="hOI-Ut-qjY">
+                                        <rect key="frame" x="20" y="20" width="353" height="651.66666666666663"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FinishGoal" translatesAutoresizingMaskIntoConstraints="NO" id="XFx-Bm-cIL">
+                                                <rect key="frame" x="20" y="48" width="313" height="280"/>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="n6m-us-eqV">
+                                                <rect key="frame" x="20" y="360" width="313" height="119.66666666666669"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Awesome! You have finished your goal!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nc1-g4-qNV">
+                                                        <rect key="frame" x="8" y="8.0000000000000036" width="297" height="57.333333333333343"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have accomplished your setted goals! What a dedication!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Bq-5v-6ml">
+                                                        <rect key="frame" x="8" y="73.333333333333314" width="297" height="38.333333333333343"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="poA-Od-9cQ">
+                                                <rect key="frame" x="20" y="511.66666666666663" width="313" height="108"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cG0-vK-IwZ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="313" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="dmA-fW-ydf"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" image="house" catalog="system" title="Back to Home" imagePadding="4">
+                                                            <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAS-qS-rVC">
+                                                        <rect key="frame" x="0.0" y="58" width="313" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="WEp-g9-1Bl"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="tinted" image="plus" catalog="system" title="Set a New Goal" imagePadding="4">
+                                                            <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <edgeInsets key="layoutMargins" top="48" left="20" bottom="32" right="20"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="hOI-Ut-qjY" firstAttribute="leading" secondItem="lRq-tf-mCg" secondAttribute="leading" constant="20" id="5nE-6n-nv8"/>
+                                    <constraint firstAttribute="trailing" secondItem="hOI-Ut-qjY" secondAttribute="trailing" constant="20" id="mY7-4S-RJd"/>
+                                    <constraint firstItem="hOI-Ut-qjY" firstAttribute="top" secondItem="lRq-tf-mCg" secondAttribute="top" constant="20" id="zdw-0V-DRf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="R47-4j-nnR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lRq-tf-mCg" firstAttribute="top" secondItem="gqn-tK-DHh" secondAttribute="bottom" id="5FT-Zb-vX6"/>
+                            <constraint firstAttribute="bottom" secondItem="lRq-tf-mCg" secondAttribute="bottom" id="8Zz-Th-jWa"/>
+                            <constraint firstItem="gqn-tK-DHh" firstAttribute="leading" secondItem="R47-4j-nnR" secondAttribute="leading" id="HBZ-po-Had"/>
+                            <constraint firstItem="gqn-tK-DHh" firstAttribute="top" secondItem="R47-4j-nnR" secondAttribute="top" id="VEt-rP-tY9"/>
+                            <constraint firstItem="lRq-tf-mCg" firstAttribute="leading" secondItem="R47-4j-nnR" secondAttribute="leading" id="fuR-yG-7wS"/>
+                            <constraint firstItem="lRq-tf-mCg" firstAttribute="trailing" secondItem="R47-4j-nnR" secondAttribute="trailing" id="pZk-XX-Uqx"/>
+                            <constraint firstItem="gqn-tK-DHh" firstAttribute="trailing" secondItem="R47-4j-nnR" secondAttribute="trailing" id="y9P-YO-JEd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="bNE-WP-p6n"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kjC-ZN-2QH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1992" y="899"/>
         </scene>
         <!--Create Goal View Controller-->
         <scene sceneID="XZJ-Z8-Tcr">
@@ -559,9 +664,11 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="EmptyGoal" width="258" height="263"/>
+        <image name="FinishGoal" width="286" height="280"/>
         <image name="Reading" width="255" height="252"/>
         <image name="book" catalog="system" width="128" height="99"/>
         <image name="checkmark.circle" catalog="system" width="128" height="123"/>
+        <image name="house" catalog="system" width="128" height="104"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="play" catalog="system" width="117" height="128"/>
         <image name="plus" catalog="system" width="128" height="113"/>
