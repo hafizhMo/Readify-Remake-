@@ -94,6 +94,10 @@ class CurrentGoalViewController: UIViewController, CurrentGoalDisplayLogic {
     yourProgressLabel.isHidden = false
     currentGoalView.isHidden = false
     emptyGoalView.isHidden = true
+    
+    bookTitleLabel.text = viewModel.title
+    progressByPagesLabel.text = viewModel.progressStr
+    progressPercentageLabel.text = viewModel.percentageStr
   }
   
   func displayPlaceholder() {

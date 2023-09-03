@@ -18,15 +18,16 @@ enum CurrentGoal {
     struct Request {}
     
     struct Response {
-      var title: String?
-      var total: Int?
-      var progress: Int?
+      var title: String
+      var total: Int
+      var progress: Int
     }
     
     struct ViewModel {
       var title: String
       var percentage: Double
       var progressStr: String
+      var percentageStr: String
     }
   }
 }

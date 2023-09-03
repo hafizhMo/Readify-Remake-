@@ -17,7 +17,6 @@
 		FB4300492A9E4DC700788636 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FB4300482A9E4DC700788636 /* README.md */; };
 		FB4300522A9E51AF00788636 /* FocusReading.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB4300512A9E51AF00788636 /* FocusReading.storyboard */; };
 		FB4300592A9E56A100788636 /* CurrentGoalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4300532A9E56A100788636 /* CurrentGoalPresenter.swift */; };
-		FB43005A2A9E56A100788636 /* CurrentGoalWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4300542A9E56A100788636 /* CurrentGoalWorker.swift */; };
 		FB43005B2A9E56A100788636 /* CurrentGoalRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4300552A9E56A100788636 /* CurrentGoalRouter.swift */; };
 		FB43005C2A9E56A100788636 /* CurrentGoalModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4300562A9E56A100788636 /* CurrentGoalModels.swift */; };
 		FB43005D2A9E56A100788636 /* CurrentGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4300572A9E56A100788636 /* CurrentGoalViewController.swift */; };
@@ -62,7 +61,6 @@
 		FB4300482A9E4DC700788636 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FB4300512A9E51AF00788636 /* FocusReading.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FocusReading.storyboard; sourceTree = "<group>"; };
 		FB4300532A9E56A100788636 /* CurrentGoalPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentGoalPresenter.swift; sourceTree = "<group>"; };
-		FB4300542A9E56A100788636 /* CurrentGoalWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentGoalWorker.swift; sourceTree = "<group>"; };
 		FB4300552A9E56A100788636 /* CurrentGoalRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentGoalRouter.swift; sourceTree = "<group>"; };
 		FB4300562A9E56A100788636 /* CurrentGoalModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentGoalModels.swift; sourceTree = "<group>"; };
 		FB4300572A9E56A100788636 /* CurrentGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentGoalViewController.swift; sourceTree = "<group>"; };
@@ -190,7 +188,6 @@
 				FB4300532A9E56A100788636 /* CurrentGoalPresenter.swift */,
 				FB4300552A9E56A100788636 /* CurrentGoalRouter.swift */,
 				FB4300572A9E56A100788636 /* CurrentGoalViewController.swift */,
-				FB4300542A9E56A100788636 /* CurrentGoalWorker.swift */,
 			);
 			path = CurrentGoal;
 			sourceTree = "<group>";
@@ -383,7 +380,6 @@
 				FB43005B2A9E56A100788636 /* CurrentGoalRouter.swift in Sources */,
 				FB43005D2A9E56A100788636 /* CurrentGoalViewController.swift in Sources */,
 				FBD84EBE2AA38B4F00042FBF /* CompleteViewController.swift in Sources */,
-				FB43005A2A9E56A100788636 /* CurrentGoalWorker.swift in Sources */,
 				FBD84EC12AA3957800042FBF /* UpdateProgressViewController.swift in Sources */,
 				FB43001B2A9E4D6300788636 /* SceneDelegate.swift in Sources */,
 				FBB8B90B2AA4E25300120BAD /* GoalUserDefaultWorker.swift in Sources */,

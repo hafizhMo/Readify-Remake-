@@ -18,9 +18,9 @@ class GoalUserDefaultWorker {
     return totalPages == 0 ? nil : totalPages
   }
   
-  func getProgress() -> Int? {
+  func getProgress() -> Int {
     let progress = SharedPreference.getInt(key: .progress)
-    return progress == 0 ? nil : progress
+    return progress
   }
   
   func getTimer() -> Double? {

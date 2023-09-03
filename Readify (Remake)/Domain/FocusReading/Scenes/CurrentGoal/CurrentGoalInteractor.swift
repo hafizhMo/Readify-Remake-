@@ -20,12 +20,14 @@ protocol CurrentGoalDataStore {}
 
 class CurrentGoalInteractor: CurrentGoalBusinessLogic, CurrentGoalDataStore {
   var presenter: CurrentGoalPresentationLogic?
-  var worker: CurrentGoalWorker?
+  var worker = GoalUserDefaultWorker()
   
   func showGoal(request: CurrentGoal.ShowGoal.Request) {
-    worker = CurrentGoalWorker()
-    
-    let response = CurrentGoal.ShowGoal.Response(title: worker?.getTitle(), total: worker?.getTotal(), progress: worker?.getProgress())
-    presenter?.presentGoal(response: response)
+    if let title = worker.getTitle(), let total = worker.getTotal() {
+      let response = CurrentGoal.ShowGoal.Response(title: title, total: total, progress: worker.getProgress())
+      presenter?.presentGoal(response: response)
+    } else {
+      presenter?.presentPlaceholder()
+    }
   }
 }

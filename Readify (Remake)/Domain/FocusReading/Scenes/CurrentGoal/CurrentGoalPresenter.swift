@@ -14,21 +14,23 @@ import UIKit
 
 protocol CurrentGoalPresentationLogic {
   func presentGoal(response: CurrentGoal.ShowGoal.Response)
+  func presentPlaceholder()
 }
 
 class CurrentGoalPresenter: CurrentGoalPresentationLogic {
   var viewController: CurrentGoalDisplayLogic?
   
   func presentGoal(response: CurrentGoal.ShowGoal.Response) {
-    if let title = response.title, !title.isEmpty, let progress = response.progress, let total = response.total {
-      let percentage = Double(total / progress)
-      let progressStr = "\(progress)/\(total)"
-      
-      let viewModel = CurrentGoal.ShowGoal.ViewModel(title: title, percentage: percentage, progressStr: progressStr)
-      viewController?.displayGoal(viewModel: viewModel)
-      
-    } else {
-      viewController?.displayPlaceholder()
-    }
+    let title = response.title
+    let progressStr = "\(response.progress)/\(response.total)"
+    let percentage = Double(response.progress / response.total)
+    let percentageStr = "\(Int(percentage * 100))%"
+    
+    let viewModel = CurrentGoal.ShowGoal.ViewModel(title: title, percentage: percentage, progressStr: progressStr, percentageStr: percentageStr)
+    viewController?.displayGoal(viewModel: viewModel)
+  }
+  
+  func presentPlaceholder() {
+    viewController?.displayPlaceholder()
   }
 }

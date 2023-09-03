@@ -125,7 +125,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zWM-Kz-26j">
                                                 <rect key="frame" x="0.0" y="103.66666666666669" width="313" height="48"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBv-ZN-0TM">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBv-ZN-0TM">
                                                         <rect key="frame" x="0.0" y="0.0" width="313" height="28.666666666666668"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                                         <nil key="textColor"/>
@@ -779,7 +779,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Kyu-Aq-EhR"/>
-        <segue reference="00C-5I-24p"/>
+        <segue reference="Eav-eu-WBq"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="EmptyGoal" width="258" height="263"/>
