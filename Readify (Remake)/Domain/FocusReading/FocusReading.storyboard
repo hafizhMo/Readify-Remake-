@@ -706,6 +706,12 @@
                                         </subviews>
                                         <edgeInsets key="layoutMargins" top="0.0" left="20" bottom="0.0" right="20"/>
                                     </stackView>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="‼️ERROR⁉️" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uyh-IK-XPQ">
+                                        <rect key="frame" x="0.0" y="491" width="393" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="elx-dv-SXu">
                                         <rect key="frame" x="0.0" y="501" width="393" height="186"/>
                                         <subviews>
@@ -718,6 +724,9 @@
                                                 <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system" title="Create New Goal" imagePadding="4">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didCreateButtonTapped:" destination="niJ-TO-RDP" eventType="touchUpInside" id="8pa-Us-I4T"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VHw-I0-8y4">
                                                 <rect key="frame" x="20" y="78" width="353" height="50"/>
@@ -728,6 +737,9 @@
                                                 <buttonConfiguration key="configuration" style="filled" image="pencil" catalog="system" title="Update Changes" imagePadding="4">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didUpdateButtonTapped:" destination="niJ-TO-RDP" eventType="touchUpInside" id="JPu-UO-Yl0"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Olk-mx-nUI">
                                                 <rect key="frame" x="20" y="136" width="353" height="50"/>
@@ -738,6 +750,9 @@
                                                 <buttonConfiguration key="configuration" style="tinted" image="trash" catalog="system" title="Delete Goal" imagePadding="4">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didDeleteButtonTapped:" destination="niJ-TO-RDP" eventType="touchUpInside" id="xXp-RH-ieF"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <edgeInsets key="layoutMargins" top="20" left="20" bottom="0.0" right="20"/>
@@ -753,6 +768,16 @@
                             <constraint firstItem="XHt-jq-p2l" firstAttribute="top" secondItem="PFi-Kg-VBC" secondAttribute="top" id="kDZ-2K-qia"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bookTitleTextField" destination="cjJ-MT-wrt" id="4ko-6J-Pc6"/>
+                        <outlet property="createButton" destination="NEe-Lf-n8e" id="iaf-vz-sqH"/>
+                        <outlet property="deleteButton" destination="Olk-mx-nUI" id="l2m-8d-dBE"/>
+                        <outlet property="errorLabel" destination="Uyh-IK-XPQ" id="cCo-aU-pWz"/>
+                        <outlet property="timerDurationPicker" destination="YQV-F2-7pE" id="Ggw-tf-FJ3"/>
+                        <outlet property="titleNavigation" destination="fTZ-Mj-ua7" id="X3r-ym-8bf"/>
+                        <outlet property="totalPagesTextField" destination="LjQ-rS-OJ9" id="2Jm-wP-gJV"/>
+                        <outlet property="updateButton" destination="VHw-I0-8y4" id="3Wx-ne-Wfm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="er2-2h-hSc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -778,7 +803,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Kyu-Aq-EhR"/>
+        <segue reference="uMN-X5-8IF"/>
         <segue reference="Eav-eu-WBq"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -807,6 +832,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
