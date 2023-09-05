@@ -13,6 +13,7 @@
 import UIKit
 
 protocol CreateGoalPresentationLogic {
+  func presentDeletedGoalCallback()
   func presentSavedGoalCallback(response: CreateGoal.SaveGoal.Response)
   func presentEditForm(response: CreateGoal.PrepareGoal.Response)
   func presentCreateForm()
@@ -33,5 +34,9 @@ class CreateGoalPresenter: CreateGoalPresentationLogic {
   func presentSavedGoalCallback(response: CreateGoal.SaveGoal.Response) {
     let viewModel = CreateGoal.SaveGoal.ViewModel(isSuccess: response.isSuccess, message: response.message)
     viewController?.displaySavedGoalCallback(viewModel: viewModel)
+  }
+  
+  func presentDeletedGoalCallback() {
+    viewController?.displayDeletedGoalCallback()
   }
 }

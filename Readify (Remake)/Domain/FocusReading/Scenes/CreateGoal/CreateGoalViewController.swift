@@ -11,6 +11,7 @@ protocol CreateGoalDisplayLogic: NSObject {
   func displayCreateForm()
   func displayEditForm(viewModel: CreateGoal.PrepareGoal.ViewModel)
   func displaySavedGoalCallback(viewModel: CreateGoal.SaveGoal.ViewModel)
+  func displayDeletedGoalCallback()
 }
 
 class CreateGoalViewController: UIViewController, CreateGoalDisplayLogic {
@@ -63,6 +64,7 @@ class CreateGoalViewController: UIViewController, CreateGoalDisplayLogic {
   }
   
   @IBAction func didDeleteButtonTapped(_ sender: Any) {
+    interactor?.deleteGoal()
   }
   
   func prepareForm() {
@@ -89,7 +91,11 @@ class CreateGoalViewController: UIViewController, CreateGoalDisplayLogic {
     errorLabel.isHidden = viewModel.isSuccess
     
     if viewModel.isSuccess {
-      // dismiss()
+      dismiss(animated: true)
     }
+  }
+  
+  func displayDeletedGoalCallback() {
+    dismiss(animated: true)
   }
 }

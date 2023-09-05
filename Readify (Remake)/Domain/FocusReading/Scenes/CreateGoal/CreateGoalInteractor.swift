@@ -15,11 +15,20 @@ import UIKit
 protocol CreateGoalBusinessLogic {
   func saveGoal(request: CreateGoal.SaveGoal.Request)
   func prepareForm()
+  func deleteGoal()
 }
 
 class CreateGoalInteractor: CreateGoalBusinessLogic {
   var presenter: CreateGoalPresentationLogic?
   var worker = GoalUserDefaultWorker()
+  
+  func deleteGoal() {
+    SharedPreference.saveString(key: .bookTitle, value: "")
+    SharedPreference.saveInt(key: .totalPages, value: 0)
+    SharedPreference.saveDouble(key: .timer, value: 0)
+    
+    presenter?.presentDeletedGoalCallback()
+  }
   
   func saveGoal(request: CreateGoal.SaveGoal.Request) {
     var response = CreateGoal.SaveGoal.Response(isSuccess: true)
