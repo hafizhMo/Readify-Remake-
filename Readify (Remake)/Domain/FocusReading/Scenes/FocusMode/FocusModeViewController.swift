@@ -9,6 +9,8 @@ import UIKit
 
 class FocusModeViewController: UIViewController {
   
+  private var isPlaying = false
+  
   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
     super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     setup()
@@ -23,6 +25,11 @@ class FocusModeViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    timerProgressView.transform = timerProgressView.transform.scaledBy(x: 1, y: 8)
+    timerProgressView.layer.masksToBounds = true
+    timerProgressView.layer.cornerRadius = 8
+    timerLabel.text = "00:00"
   }
   
   @IBOutlet weak var timerProgressView: UIProgressView!
@@ -33,8 +40,12 @@ class FocusModeViewController: UIViewController {
   
   
   @IBAction func didCancelButtonTapped(_ sender: Any) {
+     dismiss(animated: true)
   }
   
   @IBAction func didPlayButtonTapped(_ sender: Any) {
+    isPlaying.toggle()
+    playButton.setImage(isPlaying ? UIImage(systemName: "pause") : UIImage(systemName: "play"), for: .normal)
+    playButton.setTitle(isPlaying ? "Pause" : "Resume", for: .normal)
   }
 }
