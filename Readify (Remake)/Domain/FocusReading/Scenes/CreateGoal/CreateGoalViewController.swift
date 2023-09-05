@@ -91,7 +91,7 @@ class CreateGoalViewController: UIViewController, CreateGoalDisplayLogic {
     errorLabel.isHidden = viewModel.isSuccess
     
     if viewModel.isSuccess {
-      dismiss(animated: true)
+//      dismiss(animated: true) TODO: handle async process first
     }
   }
   
