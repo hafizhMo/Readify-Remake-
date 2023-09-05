@@ -21,8 +21,20 @@ class FocusModeViewController: UIViewController {
   
   private func setup() {}
   
-  
   override func viewDidLoad() {
     super.viewDidLoad()
+  }
+  
+  @IBOutlet weak var timerProgressView: UIProgressView!
+  @IBOutlet weak var timerLabel: UILabel!
+  
+  @IBOutlet weak var cancelButton: UIButton!
+  @IBOutlet weak var playButton: UIButton!
+  
+  
+  @IBAction func didCancelButtonTapped(_ sender: Any) {
+  }
+  
+  @IBAction func didPlayButtonTapped(_ sender: Any) {
   }
 }

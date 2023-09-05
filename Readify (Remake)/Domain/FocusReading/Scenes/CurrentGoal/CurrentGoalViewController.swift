@@ -46,7 +46,7 @@ class CurrentGoalViewController: UIViewController, CurrentGoalDisplayLogic {
     doSomething()
   }
   
-  @IBOutlet weak var circularProgressBar: UIView!
+  @IBOutlet weak var circularProgressBar: HalfCircularProgressView!
   
   @IBOutlet weak var progressByPagesLabel: UILabel!
   @IBOutlet weak var bookTitleLabel: UILabel!
@@ -82,6 +82,7 @@ class CurrentGoalViewController: UIViewController, CurrentGoalDisplayLogic {
     bookTitleLabel.text = viewModel.title
     progressByPagesLabel.text = viewModel.progressStr
     progressPercentageLabel.text = viewModel.percentageStr
+    circularProgressBar.progress = viewModel.percentage
   }
   
   func displayPlaceholder() {
