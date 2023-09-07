@@ -23,7 +23,7 @@ class CurrentGoalPresenter: CurrentGoalPresentationLogic {
   func presentGoal(response: CurrentGoal.ShowGoal.Response) {
     let title = response.title
     let progressStr = "\(response.progress)/\(response.total)"
-    let percentage = Double(response.progress / response.total)
+    let percentage = Double(response.progress) / Double(response.total)
     let percentageStr = "\(Int(percentage * 100))%"
     
     let viewModel = CurrentGoal.ShowGoal.ViewModel(title: title, percentage: percentage, progressStr: progressStr, percentageStr: percentageStr)
