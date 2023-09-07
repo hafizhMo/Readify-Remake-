@@ -20,7 +20,7 @@ class FocusModePresenter: FocusModePresentationLogic {
   weak var viewController: FocusModeDisplayLogic?
   
   func presentTimer(response:FocusMode.Timer.Response) {
-    let viewModel = FocusMode.Timer.ViewModel(timer: response.timer, progress: 0)
+    let viewModel = FocusMode.Timer.ViewModel(timer: response.timer, progress: response.duration)
     viewController?.displayTimer(viewModel: viewModel)
   }
 }

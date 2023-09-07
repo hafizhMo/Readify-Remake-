@@ -19,6 +19,7 @@ enum FocusMode {
     
     struct Response {
       var timer: String
+      var duration: Float
     }
     
     struct ViewModel {

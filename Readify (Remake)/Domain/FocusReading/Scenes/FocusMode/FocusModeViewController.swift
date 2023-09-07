@@ -18,6 +18,10 @@ class FocusModeViewController: UIViewController, FocusModeDisplayLogic {
   var interactor: FocusModeBusinessLogic?
   
   private var isPlaying = false
+  private var timer = Timer()
+  private var progress: Float?
+  private var progressTotal: Float?
+  private let worker = FocusModeWorker()
   
   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
     super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -55,7 +59,14 @@ class FocusModeViewController: UIViewController, FocusModeDisplayLogic {
   }
   
   @IBAction func didPlayButtonTapped(_ sender: Any) {
+    if isPlaying {
+      timer.invalidate()
+    } else {
+      timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(playTimer), userInfo: nil, repeats: true)
+    }
+    
     isPlaying.toggle()
+    
     playButton.setImage(isPlaying ? UIImage(systemName: "pause") : UIImage(systemName: "play"), for: .normal)
     playButton.setTitle(isPlaying ? "Pause" : "Resume", for: .normal)
   }
@@ -65,12 +76,23 @@ class FocusModeViewController: UIViewController, FocusModeDisplayLogic {
     timerProgressView.layer.masksToBounds = true
     timerProgressView.layer.cornerRadius = 8
 
-    timerProgressView.progress = viewModel.progress
+    timerProgressView.progress = 1
     timerLabel.text = viewModel.timer
+    
+    progress = viewModel.progress
+    progressTotal = viewModel.progress
   }
   
   @objc func playTimer() {
+    let currentProgress = (progress! - 1) / progressTotal!
+    timerProgressView.setProgress(currentProgress, animated: true)
     
+    if progress! > 0 {
+      progress! -= 1
+      timerLabel.text = worker.formatTimer(s: Int(progress!))
+    } else {
+      timer.invalidate()
+    }
   }
   
   func pauseTimer() {
