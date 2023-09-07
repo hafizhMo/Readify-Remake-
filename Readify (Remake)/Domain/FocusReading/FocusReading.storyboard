@@ -486,6 +486,9 @@
                                                         <buttonConfiguration key="configuration" style="filled" image="arrow.up.circle" catalog="system" title="Update My Progress" imagePadding="4">
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="didUpdateProgressTapped:" destination="pvd-gS-x2h" eventType="touchUpInside" id="PnC-Mo-PdP"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mil-J5-dJS">
                                                         <rect key="frame" x="0.0" y="58" width="313" height="50"/>
@@ -497,6 +500,7 @@
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                                         </buttonConfiguration>
                                                         <connections>
+                                                            <action selector="didCompleteTapped:" destination="pvd-gS-x2h" eventType="touchUpInside" id="nWj-uI-sgV"/>
                                                             <segue destination="ioY-PH-fsV" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="00C-5I-24p"/>
                                                         </connections>
                                                     </button>
@@ -533,6 +537,9 @@
                             <constraint firstItem="1aU-aX-A97" firstAttribute="leading" secondItem="dpT-Je-Pig" secondAttribute="leading" id="yIb-P4-Vqm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="progressTextField" destination="hJi-zb-4J3" id="t73-gT-2hW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2H2-Tz-Ryw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -812,7 +819,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="uMN-X5-8IF"/>
-        <segue reference="Eav-eu-WBq"/>
+        <segue reference="00C-5I-24p"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="EmptyGoal" width="258" height="263"/>

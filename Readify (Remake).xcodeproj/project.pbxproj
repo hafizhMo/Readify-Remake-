@@ -31,6 +31,8 @@
 		FBEBE4EF2AA987D800439EE2 /* FocusModeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBE4EE2AA987D800439EE2 /* FocusModeInteractor.swift */; };
 		FBEBE4F12AA9881B00439EE2 /* FocusModeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBE4F02AA9881B00439EE2 /* FocusModeModels.swift */; };
 		FBEBE4F32AA9896F00439EE2 /* FocusModePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBE4F22AA9896F00439EE2 /* FocusModePresenter.swift */; };
+		FBEBE4F52AA9A7DC00439EE2 /* UpdateProgressInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBE4F42AA9A7DC00439EE2 /* UpdateProgressInteractor.swift */; };
+		FBEBE4F72AA9A88500439EE2 /* UpdateProgressPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBE4F62AA9A88500439EE2 /* UpdateProgressPresenter.swift */; };
 		FBFE99A32AA732DF00B268D3 /* CreateGoalInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFE99A22AA732DF00B268D3 /* CreateGoalInteractor.swift */; };
 		FBFE99A52AA733B400B268D3 /* CreateGoalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFE99A42AA733B400B268D3 /* CreateGoalPresenter.swift */; };
 		FBFE99A82AA77EF400B268D3 /* HalfCircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFE99A72AA77EF400B268D3 /* HalfCircularProgressView.swift */; };
@@ -82,6 +84,8 @@
 		FBEBE4EE2AA987D800439EE2 /* FocusModeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusModeInteractor.swift; sourceTree = "<group>"; };
 		FBEBE4F02AA9881B00439EE2 /* FocusModeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusModeModels.swift; sourceTree = "<group>"; };
 		FBEBE4F22AA9896F00439EE2 /* FocusModePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusModePresenter.swift; sourceTree = "<group>"; };
+		FBEBE4F42AA9A7DC00439EE2 /* UpdateProgressInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProgressInteractor.swift; sourceTree = "<group>"; };
+		FBEBE4F62AA9A88500439EE2 /* UpdateProgressPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProgressPresenter.swift; sourceTree = "<group>"; };
 		FBFE99A22AA732DF00B268D3 /* CreateGoalInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoalInteractor.swift; sourceTree = "<group>"; };
 		FBFE99A42AA733B400B268D3 /* CreateGoalPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoalPresenter.swift; sourceTree = "<group>"; };
 		FBFE99A72AA77EF400B268D3 /* HalfCircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfCircularProgressView.swift; sourceTree = "<group>"; };
@@ -257,6 +261,8 @@
 			isa = PBXGroup;
 			children = (
 				FBD84EC02AA3957800042FBF /* UpdateProgressViewController.swift */,
+				FBEBE4F42AA9A7DC00439EE2 /* UpdateProgressInteractor.swift */,
+				FBEBE4F62AA9A88500439EE2 /* UpdateProgressPresenter.swift */,
 			);
 			path = UpdateProgress;
 			sourceTree = "<group>";
@@ -408,8 +414,10 @@
 				FBFE99A52AA733B400B268D3 /* CreateGoalPresenter.swift in Sources */,
 				FB4300592A9E56A100788636 /* CurrentGoalPresenter.swift in Sources */,
 				FB4300192A9E4D6300788636 /* AppDelegate.swift in Sources */,
+				FBEBE4F52AA9A7DC00439EE2 /* UpdateProgressInteractor.swift in Sources */,
 				FBEBE4ED2AA9858400439EE2 /* FocusModeWorker.swift in Sources */,
 				FBD84EBC2AA3852800042FBF /* FocusModeViewController.swift in Sources */,
+				FBEBE4F72AA9A88500439EE2 /* UpdateProgressPresenter.swift in Sources */,
 				FB43005C2A9E56A100788636 /* CurrentGoalModels.swift in Sources */,
 				FBEBE4F12AA9881B00439EE2 /* FocusModeModels.swift in Sources */,
 				FB43005D2A9E56A100788636 /* CurrentGoalViewController.swift in Sources */,
