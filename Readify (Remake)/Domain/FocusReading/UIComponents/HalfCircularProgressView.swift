@@ -31,7 +31,6 @@ class HalfCircularProgressView: UIView {
   public var animationDidCanceled: (()->())?
   public var animationDidStopped: (()->())?
   
-  private var timer: AppTimer?
   private var isAnimating = false
   private let tickInterval = 0.1
   
@@ -113,46 +112,6 @@ class HalfCircularProgressView: UIView {
     textLayer?.string = "\(Int(progress * 100))"
     progressLayer?.strokeEnd = progress
   }
-}
-
-// Animation
-
-extension HalfCircularProgressView {
-  
-  func startAnimation(duration: TimeInterval) {
-    
-    print("Start animation")
-    isAnimating = true
-    
-    progressLayer.removeAllAnimations()
-    
-    let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
-    basicAnimation.duration = duration
-    basicAnimation.toValue = progress
-    
-    basicAnimation.delegate = self
-    
-    timer = AppTimer(duration: maxDuration, tickInterval: tickInterval)
-    
-    timer?.timerFired = { [weak self] value in
-      self?.textLayer.string = "\(value)"
-    }
-    
-    timer?.timerStopped = { [weak self] in
-      self?.textLayer.string = ""
-    }
-    
-    timer?.timerCompleted = {}
-    
-    progressLayer.add(basicAnimation, forKey: "recording")
-    timer?.start()
-  }
-  
-  func stopAnimation() {
-    timer?.stop()
-    progressLayer.removeAllAnimations()
-  }
-  
 }
 
 extension HalfCircularProgressView: CAAnimationDelegate {

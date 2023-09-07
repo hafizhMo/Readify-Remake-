@@ -27,10 +27,13 @@
 		FBD84EBC2AA3852800042FBF /* FocusModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD84EBB2AA3852800042FBF /* FocusModeViewController.swift */; };
 		FBD84EBE2AA38B4F00042FBF /* CompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD84EBD2AA38B4F00042FBF /* CompleteViewController.swift */; };
 		FBD84EC12AA3957800042FBF /* UpdateProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD84EC02AA3957800042FBF /* UpdateProgressViewController.swift */; };
+		FBEBE4ED2AA9858400439EE2 /* FocusModeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBE4EC2AA9858400439EE2 /* FocusModeWorker.swift */; };
+		FBEBE4EF2AA987D800439EE2 /* FocusModeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBE4EE2AA987D800439EE2 /* FocusModeInteractor.swift */; };
+		FBEBE4F12AA9881B00439EE2 /* FocusModeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBE4F02AA9881B00439EE2 /* FocusModeModels.swift */; };
+		FBEBE4F32AA9896F00439EE2 /* FocusModePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBE4F22AA9896F00439EE2 /* FocusModePresenter.swift */; };
 		FBFE99A32AA732DF00B268D3 /* CreateGoalInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFE99A22AA732DF00B268D3 /* CreateGoalInteractor.swift */; };
 		FBFE99A52AA733B400B268D3 /* CreateGoalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFE99A42AA733B400B268D3 /* CreateGoalPresenter.swift */; };
 		FBFE99A82AA77EF400B268D3 /* HalfCircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFE99A72AA77EF400B268D3 /* HalfCircularProgressView.swift */; };
-		FBFE99AA2AA7800400B268D3 /* AppTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFE99A92AA7800400B268D3 /* AppTimer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,10 +78,13 @@
 		FBD84EBB2AA3852800042FBF /* FocusModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusModeViewController.swift; sourceTree = "<group>"; };
 		FBD84EBD2AA38B4F00042FBF /* CompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteViewController.swift; sourceTree = "<group>"; };
 		FBD84EC02AA3957800042FBF /* UpdateProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProgressViewController.swift; sourceTree = "<group>"; };
+		FBEBE4EC2AA9858400439EE2 /* FocusModeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusModeWorker.swift; sourceTree = "<group>"; };
+		FBEBE4EE2AA987D800439EE2 /* FocusModeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusModeInteractor.swift; sourceTree = "<group>"; };
+		FBEBE4F02AA9881B00439EE2 /* FocusModeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusModeModels.swift; sourceTree = "<group>"; };
+		FBEBE4F22AA9896F00439EE2 /* FocusModePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusModePresenter.swift; sourceTree = "<group>"; };
 		FBFE99A22AA732DF00B268D3 /* CreateGoalInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoalInteractor.swift; sourceTree = "<group>"; };
 		FBFE99A42AA733B400B268D3 /* CreateGoalPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoalPresenter.swift; sourceTree = "<group>"; };
 		FBFE99A72AA77EF400B268D3 /* HalfCircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfCircularProgressView.swift; sourceTree = "<group>"; };
-		FBFE99A92AA7800400B268D3 /* AppTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTimer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,9 +176,9 @@
 			isa = PBXGroup;
 			children = (
 				FB4300512A9E51AF00788636 /* FocusReading.storyboard */,
-				FBFE99A62AA77EDA00B268D3 /* UIComponents */,
 				FB43004C2A9E4E8400788636 /* Scenes */,
 				FBB8B9052AA4DDBF00120BAD /* Shared */,
+				FBFE99A62AA77EDA00B268D3 /* UIComponents */,
 			);
 			path = FocusReading;
 			sourceTree = "<group>";
@@ -222,7 +228,11 @@
 		FB4300502A9E4EC200788636 /* FocusMode */ = {
 			isa = PBXGroup;
 			children = (
+				FBEBE4EE2AA987D800439EE2 /* FocusModeInteractor.swift */,
+				FBEBE4F02AA9881B00439EE2 /* FocusModeModels.swift */,
+				FBEBE4F22AA9896F00439EE2 /* FocusModePresenter.swift */,
 				FBD84EBB2AA3852800042FBF /* FocusModeViewController.swift */,
+				FBEBE4EC2AA9858400439EE2 /* FocusModeWorker.swift */,
 			);
 			path = FocusMode;
 			sourceTree = "<group>";
@@ -239,7 +249,6 @@
 			isa = PBXGroup;
 			children = (
 				FBB8B9082AA4E0FF00120BAD /* SharedPreference.swift */,
-				FBFE99A92AA7800400B268D3 /* AppTimer.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -394,18 +403,21 @@
 			files = (
 				FBB8B90E2AA4F13D00120BAD /* CreateGoalModels.swift in Sources */,
 				FBB8B9092AA4E0FF00120BAD /* SharedPreference.swift in Sources */,
+				FBEBE4EF2AA987D800439EE2 /* FocusModeInteractor.swift in Sources */,
 				FBFE99A32AA732DF00B268D3 /* CreateGoalInteractor.swift in Sources */,
 				FBFE99A52AA733B400B268D3 /* CreateGoalPresenter.swift in Sources */,
 				FB4300592A9E56A100788636 /* CurrentGoalPresenter.swift in Sources */,
 				FB4300192A9E4D6300788636 /* AppDelegate.swift in Sources */,
-				FBFE99AA2AA7800400B268D3 /* AppTimer.swift in Sources */,
+				FBEBE4ED2AA9858400439EE2 /* FocusModeWorker.swift in Sources */,
 				FBD84EBC2AA3852800042FBF /* FocusModeViewController.swift in Sources */,
 				FB43005C2A9E56A100788636 /* CurrentGoalModels.swift in Sources */,
+				FBEBE4F12AA9881B00439EE2 /* FocusModeModels.swift in Sources */,
 				FB43005D2A9E56A100788636 /* CurrentGoalViewController.swift in Sources */,
 				FBFE99A82AA77EF400B268D3 /* HalfCircularProgressView.swift in Sources */,
 				FBD84EBE2AA38B4F00042FBF /* CompleteViewController.swift in Sources */,
 				FBD84EC12AA3957800042FBF /* UpdateProgressViewController.swift in Sources */,
 				FB43001B2A9E4D6300788636 /* SceneDelegate.swift in Sources */,
+				FBEBE4F32AA9896F00439EE2 /* FocusModePresenter.swift in Sources */,
 				FBB8B90B2AA4E25300120BAD /* GoalUserDefaultWorker.swift in Sources */,
 				FBD84EBA2AA37F2800042FBF /* CreateGoalViewController.swift in Sources */,
 				FB43005E2A9E56A100788636 /* CurrentGoalInteractor.swift in Sources */,

@@ -7,7 +7,15 @@
 
 import UIKit
 
-class FocusModeViewController: UIViewController {
+protocol FocusModeDisplayLogic: NSObject {
+  func displayTimer(viewModel: FocusMode.Timer.ViewModel)
+  func playTimer()
+  func pauseTimer()
+  func stopTimer()
+}
+
+class FocusModeViewController: UIViewController, FocusModeDisplayLogic {
+  var interactor: FocusModeBusinessLogic?
   
   private var isPlaying = false
   
@@ -21,15 +29,18 @@ class FocusModeViewController: UIViewController {
     setup()
   }
   
-  private func setup() {}
+  private func setup() {
+    let viewController = self
+    let interactor = FocusModeInteractor()
+    let presenter = FocusModePresenter()
+    viewController.interactor = interactor
+    interactor.presenter = presenter
+    presenter.viewController = viewController
+  }
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    timerProgressView.transform = timerProgressView.transform.scaledBy(x: 1, y: 8)
-    timerProgressView.layer.masksToBounds = true
-    timerProgressView.layer.cornerRadius = 8
-    timerLabel.text = "00:00"
+    interactor?.prepareTimer()
   }
   
   @IBOutlet weak var timerProgressView: UIProgressView!
@@ -47,5 +58,26 @@ class FocusModeViewController: UIViewController {
     isPlaying.toggle()
     playButton.setImage(isPlaying ? UIImage(systemName: "pause") : UIImage(systemName: "play"), for: .normal)
     playButton.setTitle(isPlaying ? "Pause" : "Resume", for: .normal)
+  }
+  
+  func displayTimer(viewModel: FocusMode.Timer.ViewModel) {
+    timerProgressView.transform = timerProgressView.transform.scaledBy(x: 1, y: 8)
+    timerProgressView.layer.masksToBounds = true
+    timerProgressView.layer.cornerRadius = 8
+
+    timerProgressView.progress = viewModel.progress
+    timerLabel.text = viewModel.timer
+  }
+  
+  @objc func playTimer() {
+    
+  }
+  
+  func pauseTimer() {
+    
+  }
+  
+  func stopTimer() {
+    
   }
 }
