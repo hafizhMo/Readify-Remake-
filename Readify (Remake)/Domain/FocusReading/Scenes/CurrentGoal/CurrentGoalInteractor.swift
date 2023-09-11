@@ -25,15 +25,15 @@ class CurrentGoalInteractor: CurrentGoalBusinessLogic, CurrentGoalDataStore {
   var subscriber: AnyCancellable?
   
   func showGoal(request: CurrentGoal.ShowGoal.Request) {
-    if let title = worker.getTitle(), let total = worker.getTotal() {
-      subscriber = UserDefaults.standard
-        .publisher(for: \.progress)
-        .sink() { [weak self] in
+    subscriber = UserDefaults.standard
+      .publisher(for: \.progress)
+      .sink() { [weak self] in
+        if let title = self?.worker.getTitle(), let total = self?.worker.getTotal() {
           let response = CurrentGoal.ShowGoal.Response(title: title, total: total, progress: $0)
           self?.presenter?.presentGoal(response: response)
+        } else {
+          self?.presenter?.presentPlaceholder()
         }
-    } else {
-      presenter?.presentPlaceholder()
-    }
+      }
   }
 }

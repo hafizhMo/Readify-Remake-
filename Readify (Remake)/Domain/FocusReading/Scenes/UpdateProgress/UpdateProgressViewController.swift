@@ -47,6 +47,7 @@ class UpdateProgressViewController: UIViewController, UpdateProgressDisplayLogic
   
   @IBAction func didCompleteTapped(_ sender: Any) {
     interactor?.completeGoal()
+    routeToComplete()
   }
   
   func displayUpdatedCallback(message: String?) {
@@ -54,4 +55,13 @@ class UpdateProgressViewController: UIViewController, UpdateProgressDisplayLogic
   }
   
   func displayCompletedCallback() {}
+  
+  private func routeToComplete() {
+    if let destination = self.storyboard?.instantiateViewController(withIdentifier: "CompleteViewController") {
+      destination.modalPresentationStyle = .fullScreen
+      
+      self.dismiss(animated: false)
+      self.presentingViewController?.present(destination, animated: true)
+    }
+  }
 }

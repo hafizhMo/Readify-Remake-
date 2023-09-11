@@ -25,5 +25,9 @@ class CompleteViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
   }
+  
+  @IBAction func didBackHomeTapped(_ sender: Any) {
+    dismiss(animated: true)
+  }
 }
 

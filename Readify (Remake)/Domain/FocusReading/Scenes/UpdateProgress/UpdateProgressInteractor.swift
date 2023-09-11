@@ -33,6 +33,7 @@ class UpdateProgressInteractor: UpdateProgressBusinessLogic {
   func completeGoal() {
     SharedPreference.saveString(key: .bookTitle, value: "")
     SharedPreference.saveInt(key: .totalPages, value: 0)
+    SharedPreference.saveInt(key: .progress, value: 0)
     SharedPreference.saveDouble(key: .timer, value: 0)
     
     presenter?.presentCompletedCallback()

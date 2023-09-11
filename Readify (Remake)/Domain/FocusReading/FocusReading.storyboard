@@ -417,6 +417,7 @@
                         <outlet property="playButton" destination="uun-wK-d71" id="QxG-Je-XLr"/>
                         <outlet property="timerLabel" destination="fXB-iN-J5w" id="qF2-z1-Zv3"/>
                         <outlet property="timerProgressView" destination="2kq-Jy-1vj" id="LXe-3r-ZNG"/>
+                        <segue destination="pvd-gS-x2h" kind="presentation" modalPresentationStyle="fullScreen" id="kLT-Lg-gvA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9FR-Js-PBL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -432,14 +433,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MNu-5L-dd9">
-                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <navigationItem title="Update Reading Progress" id="ikB-rP-ufC"/>
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1aU-aX-A97">
-                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                                <rect key="frame" x="0.0" y="44" width="393" height="808"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="BCT-Ze-ygA">
                                         <rect key="frame" x="20" y="20" width="353" height="689.66666666666663"/>
@@ -501,7 +502,6 @@
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="didCompleteTapped:" destination="pvd-gS-x2h" eventType="touchUpInside" id="nWj-uI-sgV"/>
-                                                            <segue destination="ioY-PH-fsV" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="00C-5I-24p"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -539,6 +539,7 @@
                     </view>
                     <connections>
                         <outlet property="progressTextField" destination="hJi-zb-4J3" id="t73-gT-2hW"/>
+                        <segue destination="ioY-PH-fsV" kind="presentation" modalPresentationStyle="fullScreen" id="Crf-Yu-g4q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2H2-Tz-Ryw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -548,7 +549,7 @@
         <!--Complete View Controller-->
         <scene sceneID="2iT-BL-jPV">
             <objects>
-                <viewController id="ioY-PH-fsV" customClass="CompleteViewController" customModule="Readify__Remake_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CompleteViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ioY-PH-fsV" customClass="CompleteViewController" customModule="Readify__Remake_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4fF-bb-HFw">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -599,6 +600,9 @@
                                                         <buttonConfiguration key="configuration" style="filled" image="house" catalog="system" title="Back to Home" imagePadding="4">
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="didBackHomeTapped:" destination="ioY-PH-fsV" eventType="touchUpInside" id="KjQ-an-xCS"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAS-qS-rVC">
                                                         <rect key="frame" x="0.0" y="58" width="313" height="50"/>
@@ -819,7 +823,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="uMN-X5-8IF"/>
-        <segue reference="00C-5I-24p"/>
+        <segue reference="Crf-Yu-g4q"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="EmptyGoal" width="258" height="263"/>
