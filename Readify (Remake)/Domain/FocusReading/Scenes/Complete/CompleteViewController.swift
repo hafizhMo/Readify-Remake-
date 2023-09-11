@@ -29,5 +29,16 @@ class CompleteViewController: UIViewController {
   @IBAction func didBackHomeTapped(_ sender: Any) {
     dismiss(animated: true)
   }
+  
+  @IBAction func didSetNewGoalTapped(_ sender: Any) {
+    routeToCreateGoal()
+  }
+  
+  private func routeToCreateGoal() {
+    if let destination = self.storyboard?.instantiateViewController(withIdentifier: "CreateGoalViewController") {
+      self.dismiss(animated: false)
+      self.presentingViewController?.present(destination, animated: true)
+    }
+  }
 }
 

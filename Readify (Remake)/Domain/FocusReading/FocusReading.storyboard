@@ -613,6 +613,9 @@
                                                         <buttonConfiguration key="configuration" style="tinted" image="plus" catalog="system" title="Set a New Goal" imagePadding="4">
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="didSetNewGoalTapped:" destination="ioY-PH-fsV" eventType="touchUpInside" id="U8K-oH-MRh"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -656,7 +659,7 @@
         <!--Create Goal View Controller-->
         <scene sceneID="XZJ-Z8-Tcr">
             <objects>
-                <viewController id="niJ-TO-RDP" customClass="CreateGoalViewController" customModule="Readify__Remake_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateGoalViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="niJ-TO-RDP" customClass="CreateGoalViewController" customModule="Readify__Remake_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ogg-JT-Z7i">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
