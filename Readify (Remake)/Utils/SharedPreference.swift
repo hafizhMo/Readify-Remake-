@@ -7,6 +7,12 @@
 
 import Foundation
 
+extension UserDefaults {
+  @objc dynamic var progress: Int {
+    return integer(forKey: PrefKeys.progress.rawValue)
+  }
+}
+
 enum PrefKeys: String {
   case bookTitle
   case totalPages

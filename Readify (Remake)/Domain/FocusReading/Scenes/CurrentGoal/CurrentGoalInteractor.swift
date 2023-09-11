@@ -11,6 +11,7 @@
 //
 
 import UIKit
+import Combine
 
 protocol CurrentGoalBusinessLogic {
   func showGoal(request: CurrentGoal.ShowGoal.Request)
@@ -21,11 +22,16 @@ protocol CurrentGoalDataStore {}
 class CurrentGoalInteractor: CurrentGoalBusinessLogic, CurrentGoalDataStore {
   var presenter: CurrentGoalPresentationLogic?
   var worker = GoalUserDefaultWorker()
+  var subscriber: AnyCancellable?
   
   func showGoal(request: CurrentGoal.ShowGoal.Request) {
     if let title = worker.getTitle(), let total = worker.getTotal() {
-      let response = CurrentGoal.ShowGoal.Response(title: title, total: total, progress: worker.getProgress())
-      presenter?.presentGoal(response: response)
+      subscriber = UserDefaults.standard
+        .publisher(for: \.progress)
+        .sink() { [weak self] in
+          let response = CurrentGoal.ShowGoal.Response(title: title, total: total, progress: $0)
+          self?.presenter?.presentGoal(response: response)
+        }
     } else {
       presenter?.presentPlaceholder()
     }

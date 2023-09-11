@@ -312,7 +312,7 @@
         <!--Focus Mode View Controller-->
         <scene sceneID="bac-sA-pVp">
             <objects>
-                <viewController id="13k-vs-0wE" customClass="FocusModeViewController" customModule="Readify__Remake_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FocusModeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="13k-vs-0wE" customClass="FocusModeViewController" customModule="Readify__Remake_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5U3-86-U5I">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -426,7 +426,7 @@
         <!--Update Progress View Controller-->
         <scene sceneID="kc1-ey-jts">
             <objects>
-                <viewController id="pvd-gS-x2h" customClass="UpdateProgressViewController" customModule="Readify__Remake_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UpdateProgressViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pvd-gS-x2h" customClass="UpdateProgressViewController" customModule="Readify__Remake_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QUR-uJ-ctN">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
