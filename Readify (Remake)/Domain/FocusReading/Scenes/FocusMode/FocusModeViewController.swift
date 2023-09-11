@@ -92,6 +92,7 @@ class FocusModeViewController: UIViewController, FocusModeDisplayLogic {
       timerLabel.text = worker.formatTimer(s: Int(progress!))
     } else {
       timer.invalidate()
+      routeToUpdateProgress()
     }
   }
   
@@ -101,5 +102,14 @@ class FocusModeViewController: UIViewController, FocusModeDisplayLogic {
   
   func stopTimer() {
     
+  }
+  
+  private func routeToUpdateProgress() {
+    if let destination = self.storyboard?.instantiateViewController(withIdentifier: "UpdateProgressViewController") {
+      destination.modalPresentationStyle = .fullScreen
+      
+      self.dismiss(animated: false)
+      self.presentingViewController?.present(destination, animated: true)
+    }
   }
 }
