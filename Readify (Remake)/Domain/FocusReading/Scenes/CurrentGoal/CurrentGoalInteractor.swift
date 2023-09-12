@@ -21,19 +21,19 @@ protocol CurrentGoalDataStore {}
 
 class CurrentGoalInteractor: CurrentGoalBusinessLogic, CurrentGoalDataStore {
   var presenter: CurrentGoalPresentationLogic?
-  var worker = GoalUserDefaultWorker()
   var subscriber: AnyCancellable?
   
   func showGoal(request: CurrentGoal.ShowGoal.Request) {
     subscriber = UserDefaults.standard
-      .publisher(for: \.progress)
-      .sink() { [weak self] in
-        if let title = self?.worker.getTitle(), let total = self?.worker.getTotal() {
-          let response = CurrentGoal.ShowGoal.Response(title: title, total: total, progress: $0)
-          self?.presenter?.presentGoal(response: response)
-        } else {
+      .publisher(for: \.goal)
+      .sink() { [weak self] goal in
+        guard let goal = goal else {
           self?.presenter?.presentPlaceholder()
+          return
         }
+        
+        let response = CurrentGoal.ShowGoal.Response(title: goal.title, total: goal.total, progress: goal.progress)
+        self?.presenter?.presentGoal(response: response)
       }
   }
 }

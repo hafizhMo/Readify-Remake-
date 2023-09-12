@@ -18,14 +18,13 @@ protocol FocusModeBusinessLogic {
 
 class FocusModeInteractor: FocusModeBusinessLogic {
   var presenter: FocusModePresentationLogic?
-  let goalWorker = GoalUserDefaultWorker()
   let focusModeWorker = FocusModeWorker()
   
   func prepareTimer() {
-    guard let seconds = goalWorker.getTimer() else { return }
+    guard let goal = UserDefaults.standard.goal else { return }
     
-    let timerStr = focusModeWorker.formatTimer(s: Int(seconds))
-    let response = FocusMode.Timer.Response(timer: timerStr, duration: Float(seconds))
+    let timerStr = focusModeWorker.formatTimer(s: Int(goal.timer))
+    let response = FocusMode.Timer.Response(timer: timerStr, duration: Float(goal.timer))
     
     presenter?.presentTimer(response: response)
   }

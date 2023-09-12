@@ -20,13 +20,9 @@ protocol CreateGoalBusinessLogic {
 
 class CreateGoalInteractor: CreateGoalBusinessLogic {
   var presenter: CreateGoalPresentationLogic?
-  var worker = GoalUserDefaultWorker()
   
   func deleteGoal() {
-    SharedPreference.saveString(key: .bookTitle, value: "")
-    SharedPreference.saveInt(key: .totalPages, value: 0)
-    SharedPreference.saveDouble(key: .timer, value: 0)
-    
+    UserDefaults.standard.goal = nil
     presenter?.presentDeletedGoalCallback()
   }
   
@@ -52,9 +48,7 @@ class CreateGoalInteractor: CreateGoalBusinessLogic {
     }
     
     if let total = Int(totalStr), total > 0 {
-      SharedPreference.saveInt(key: .totalPages, value: total)
-      SharedPreference.saveString(key: .bookTitle, value: title)
-      SharedPreference.saveDouble(key: .timer, value: request.timer)
+      UserDefaults.standard.goal = Goal(title: title, total: total, timer: request.timer)
       presenter?.presentSavedGoalCallback(response: response)
     } else {
       response = CreateGoal.SaveGoal.Response(isSuccess: false, message: "Total pages must be greater than 0")
@@ -63,11 +57,12 @@ class CreateGoalInteractor: CreateGoalBusinessLogic {
   }
   
   func prepareForm() {
-    if let title = worker.getTitle(), let total = worker.getTotal(), let timer = worker.getTimer() {
-      let response = CreateGoal.PrepareGoal.Response(title: title, total: total, timer: timer)
-      presenter?.presentEditForm(response: response)
-    } else {
+    guard let goal = UserDefaults.standard.goal else {
       presenter?.presentCreateForm()
+      return
     }
+    
+    let response = CreateGoal.PrepareGoal.Response(title: goal.title, total: goal.total, timer: goal.timer)
+    presenter?.presentEditForm(response: response)
   }
 }

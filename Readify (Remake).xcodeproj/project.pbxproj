@@ -20,8 +20,8 @@
 		FB43005C2A9E56A100788636 /* CurrentGoalModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4300562A9E56A100788636 /* CurrentGoalModels.swift */; };
 		FB43005D2A9E56A100788636 /* CurrentGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4300572A9E56A100788636 /* CurrentGoalViewController.swift */; };
 		FB43005E2A9E56A100788636 /* CurrentGoalInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4300582A9E56A100788636 /* CurrentGoalInteractor.swift */; };
+		FBA6CABB2AB06B3700EE135C /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA6CABA2AB06B3700EE135C /* Goal.swift */; };
 		FBB8B9092AA4E0FF00120BAD /* SharedPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB8B9082AA4E0FF00120BAD /* SharedPreference.swift */; };
-		FBB8B90B2AA4E25300120BAD /* GoalUserDefaultWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB8B90A2AA4E25300120BAD /* GoalUserDefaultWorker.swift */; };
 		FBB8B90E2AA4F13D00120BAD /* CreateGoalModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB8B90D2AA4F13D00120BAD /* CreateGoalModels.swift */; };
 		FBD84EBA2AA37F2800042FBF /* CreateGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD84EB92AA37F2800042FBF /* CreateGoalViewController.swift */; };
 		FBD84EBC2AA3852800042FBF /* FocusModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD84EBB2AA3852800042FBF /* FocusModeViewController.swift */; };
@@ -73,8 +73,8 @@
 		FB4300562A9E56A100788636 /* CurrentGoalModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentGoalModels.swift; sourceTree = "<group>"; };
 		FB4300572A9E56A100788636 /* CurrentGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentGoalViewController.swift; sourceTree = "<group>"; };
 		FB4300582A9E56A100788636 /* CurrentGoalInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentGoalInteractor.swift; sourceTree = "<group>"; };
+		FBA6CABA2AB06B3700EE135C /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		FBB8B9082AA4E0FF00120BAD /* SharedPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedPreference.swift; sourceTree = "<group>"; };
-		FBB8B90A2AA4E25300120BAD /* GoalUserDefaultWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalUserDefaultWorker.swift; sourceTree = "<group>"; };
 		FBB8B90D2AA4F13D00120BAD /* CreateGoalModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoalModels.swift; sourceTree = "<group>"; };
 		FBD84EB92AA37F2800042FBF /* CreateGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoalViewController.swift; sourceTree = "<group>"; };
 		FBD84EBB2AA3852800042FBF /* FocusModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusModeViewController.swift; sourceTree = "<group>"; };
@@ -180,8 +180,8 @@
 			isa = PBXGroup;
 			children = (
 				FB4300512A9E51AF00788636 /* FocusReading.storyboard */,
+				FBA6CAB92AB06B2E00EE135C /* Models */,
 				FB43004C2A9E4E8400788636 /* Scenes */,
-				FBB8B9052AA4DDBF00120BAD /* Shared */,
 				FBFE99A62AA77EDA00B268D3 /* UIComponents */,
 			);
 			path = FocusReading;
@@ -241,12 +241,12 @@
 			path = FocusMode;
 			sourceTree = "<group>";
 		};
-		FBB8B9052AA4DDBF00120BAD /* Shared */ = {
+		FBA6CAB92AB06B2E00EE135C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FBB8B90A2AA4E25300120BAD /* GoalUserDefaultWorker.swift */,
+				FBA6CABA2AB06B3700EE135C /* Goal.swift */,
 			);
-			path = Shared;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		FBB8B90C2AA4E5A000120BAD /* Utils */ = {
@@ -426,7 +426,7 @@
 				FBD84EC12AA3957800042FBF /* UpdateProgressViewController.swift in Sources */,
 				FB43001B2A9E4D6300788636 /* SceneDelegate.swift in Sources */,
 				FBEBE4F32AA9896F00439EE2 /* FocusModePresenter.swift in Sources */,
-				FBB8B90B2AA4E25300120BAD /* GoalUserDefaultWorker.swift in Sources */,
+				FBA6CABB2AB06B3700EE135C /* Goal.swift in Sources */,
 				FBD84EBA2AA37F2800042FBF /* CreateGoalViewController.swift in Sources */,
 				FB43005E2A9E56A100788636 /* CurrentGoalInteractor.swift in Sources */,
 			);

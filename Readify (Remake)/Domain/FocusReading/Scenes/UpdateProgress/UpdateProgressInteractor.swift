@@ -26,16 +26,13 @@ class UpdateProgressInteractor: UpdateProgressBusinessLogic {
       return
     }
     
-    SharedPreference.saveInt(key: .progress, value: value)
+    guard let goal = UserDefaults.standard.goal else { return }
+    UserDefaults.standard.goal = Goal(title: goal.title, total: goal.total, timer: goal.timer, progress: value)
     presenter?.presentUpdatedCallback(message: nil)
   }
   
   func completeGoal() {
-    SharedPreference.saveString(key: .bookTitle, value: "")
-    SharedPreference.saveInt(key: .totalPages, value: 0)
-    SharedPreference.saveInt(key: .progress, value: 0)
-    SharedPreference.saveDouble(key: .timer, value: 0)
-    
+    UserDefaults.standard.goal = nil
     presenter?.presentCompletedCallback()
   }
 }
