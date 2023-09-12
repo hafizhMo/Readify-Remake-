@@ -44,11 +44,11 @@ class CurrentGoalInteractor: CurrentGoalBusinessLogic, CurrentGoalDataStore {
       .publisher(for: \.streak)
       .sink() { [weak self] streak in
         guard let streak = streak else {
-          UserDefaults.standard.streak = Streak(day: 1)
+          UserDefaults.standard.streak = Streak(day: 0)
           return
         }
         
-        let day = streak.day
+        let day = streak.day + 1
         let week = (day / 7) + (day % 7 == 0 ? 0 : 1)
         var items: [(StreakType, String)] = []
         
@@ -58,13 +58,14 @@ class CurrentGoalInteractor: CurrentGoalBusinessLogic, CurrentGoalDataStore {
           if i < tempDay {
             items.append((.passed, realDay))
           } else if i == tempDay {
-            items.append((streak.latestDate == Date() ? .passed : .current, realDay))
+            items.append((streak.latestDate == Date() ? .upcoming : .current, realDay))
           } else {
             items.append((.upcoming, realDay))
           }
         }
         
-        let response = CurrentGoal.ShowStreak.Response(day: day, week: week, items: items)
+        let dayResponse = streak.latestDate == Date() ? streak.day : day
+        let response = CurrentGoal.ShowStreak.Response(day: dayResponse, week: week, items: items)
         self?.presenter?.presentStreak(response: response)
       }
   }
