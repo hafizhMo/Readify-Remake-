@@ -58,13 +58,13 @@ class CurrentGoalInteractor: CurrentGoalBusinessLogic, CurrentGoalDataStore {
           if i < tempDay {
             items.append((.passed, realDay))
           } else if i == tempDay {
-            items.append((streak.latestDate == Date() ? .upcoming : .current, realDay))
+            items.append((Calendar.current.isDateInYesterday(streak.latestDate) ? .current : .upcoming, realDay))
           } else {
             items.append((.upcoming, realDay))
           }
         }
         
-        let dayResponse = streak.latestDate == Date() ? streak.day : day
+        let dayResponse = Calendar.current.isDateInYesterday(streak.latestDate) ? day : streak.day
         let response = CurrentGoal.ShowStreak.Response(day: dayResponse, week: week, items: items)
         self?.presenter?.presentStreak(response: response)
       }

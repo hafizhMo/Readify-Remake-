@@ -20,6 +20,16 @@ class CompleteInteractor: CompleteBusinessLogic {
   var presenter: CompletePresentationLogic?
   
   func completeGoal() {
+    guard let streak = UserDefaults.standard.streak else { return }
+    
+    if Calendar.current.isDateInYesterday(streak.latestDate) {
+      UserDefaults.standard.streak = Streak(day: streak.day + 1, latestDate: Date())
+    } else if Calendar.current.isDateInToday(streak.latestDate) {
+      UserDefaults.standard.streak = Streak(day: streak.day, latestDate: Date())
+    } else {
+      UserDefaults.standard.streak = nil
+    }
+    
     UserDefaults.standard.goal = nil
     presenter?.presentCompleted()
   }

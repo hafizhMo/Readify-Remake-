@@ -20,7 +20,7 @@ class UpdateProgressInteractor: UpdateProgressBusinessLogic {
   var presenter: UpdateProgressPresentationLogic?
   
   func updateProgress(progress: String?) {
-    guard let progress = progress, let value = Int(progress), let goal = UserDefaults.standard.goal else {
+    guard let progress = progress, let value = Int(progress), let goal = UserDefaults.standard.goal, let streak = UserDefaults.standard.streak else {
       presenter?.presentUpdatedCallback(message: "Progress field still empty!")
       return
     }
@@ -33,6 +33,14 @@ class UpdateProgressInteractor: UpdateProgressBusinessLogic {
     if value == goal.total {
       presenter?.presentCompleted()
       return
+    }
+    
+    if Calendar.current.isDateInYesterday(streak.latestDate) {
+      UserDefaults.standard.streak = Streak(day: streak.day + 1, latestDate: Date())
+    } else if Calendar.current.isDateInToday(streak.latestDate) {
+      UserDefaults.standard.streak = Streak(day: streak.day, latestDate: Date())
+    } else {
+      UserDefaults.standard.streak = nil
     }
     
     UserDefaults.standard.goal = Goal(title: goal.title, total: goal.total, timer: goal.timer, progress: value)
