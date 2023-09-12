@@ -13,6 +13,7 @@
 import UIKit
 
 protocol CurrentGoalPresentationLogic {
+  func presentStreak(response: CurrentGoal.ShowStreak.Response)
   func presentGoal(response: CurrentGoal.ShowGoal.Response)
   func presentPlaceholder()
 }
@@ -32,5 +33,11 @@ class CurrentGoalPresenter: CurrentGoalPresentationLogic {
   
   func presentPlaceholder() {
     viewController?.displayPlaceholder()
+  }
+  
+  func presentStreak(response: CurrentGoal.ShowStreak.Response) {
+    let dayAndWeek = "Day \(response.day) / Week \(response.week)"
+    let viewModel = CurrentGoal.ShowStreak.ViewModel(dayAndWeek: dayAndWeek, items: response.items)
+    viewController?.displayStreak(viewModel: viewModel)
   }
 }

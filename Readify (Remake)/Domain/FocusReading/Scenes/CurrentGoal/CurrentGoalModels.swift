@@ -30,4 +30,26 @@ enum CurrentGoal {
       var percentageStr: String
     }
   }
+  
+  enum ShowStreak {
+    struct Request {}
+    
+    struct Response {
+      var day: Int
+      var week: Int
+      var items: [(StreakType, String)]
+    }
+    
+    struct ViewModel {
+      var dayAndWeek: String
+      var items: [(StreakType, String)]
+    }
+  }
+  
+}
+
+enum StreakType {
+  case passed
+  case current
+  case upcoming
 }

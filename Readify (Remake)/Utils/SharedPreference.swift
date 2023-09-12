@@ -7,30 +7,9 @@
 
 import Foundation
 
-extension UserDefaults {
-  @objc dynamic var goal: Goal? {
-    set {
-      if let data = newValue {
-        let goal = try? JSONEncoder().encode(data)
-        setValue(goal, forKey: PrefKeys.goal.rawValue)
-      } else {
-        removeObject(forKey: PrefKeys.goal.rawValue)
-      }
-    }
-    
-    get {
-      if let data = object(forKey: PrefKeys.goal.rawValue) as? Data {
-        let goal = try? JSONDecoder().decode(Goal.self, from: data)
-        return goal
-      }
-      
-      return nil
-    }
-  }
-}
-
 enum PrefKeys: String {
   case goal
+  case streak
 }
 
 struct SharedPreference {

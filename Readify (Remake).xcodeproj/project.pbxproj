@@ -23,6 +23,7 @@
 		FBA6CABB2AB06B3700EE135C /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA6CABA2AB06B3700EE135C /* Goal.swift */; };
 		FBA6CABD2AB078B300EE135C /* CompleteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA6CABC2AB078B300EE135C /* CompleteInteractor.swift */; };
 		FBA6CABF2AB078E700EE135C /* CompletePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA6CABE2AB078E700EE135C /* CompletePresenter.swift */; };
+		FBA6CAC12AB0A98B00EE135C /* Streak.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA6CAC02AB0A98B00EE135C /* Streak.swift */; };
 		FBB8B9092AA4E0FF00120BAD /* SharedPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB8B9082AA4E0FF00120BAD /* SharedPreference.swift */; };
 		FBB8B90E2AA4F13D00120BAD /* CreateGoalModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB8B90D2AA4F13D00120BAD /* CreateGoalModels.swift */; };
 		FBD84EBA2AA37F2800042FBF /* CreateGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD84EB92AA37F2800042FBF /* CreateGoalViewController.swift */; };
@@ -78,6 +79,7 @@
 		FBA6CABA2AB06B3700EE135C /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		FBA6CABC2AB078B300EE135C /* CompleteInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteInteractor.swift; sourceTree = "<group>"; };
 		FBA6CABE2AB078E700EE135C /* CompletePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletePresenter.swift; sourceTree = "<group>"; };
+		FBA6CAC02AB0A98B00EE135C /* Streak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Streak.swift; sourceTree = "<group>"; };
 		FBB8B9082AA4E0FF00120BAD /* SharedPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedPreference.swift; sourceTree = "<group>"; };
 		FBB8B90D2AA4F13D00120BAD /* CreateGoalModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoalModels.swift; sourceTree = "<group>"; };
 		FBD84EB92AA37F2800042FBF /* CreateGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoalViewController.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				FBA6CABA2AB06B3700EE135C /* Goal.swift */,
+				FBA6CAC02AB0A98B00EE135C /* Streak.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				FBA6CABB2AB06B3700EE135C /* Goal.swift in Sources */,
 				FBD84EBA2AA37F2800042FBF /* CreateGoalViewController.swift in Sources */,
 				FB43005E2A9E56A100788636 /* CurrentGoalInteractor.swift in Sources */,
+				FBA6CAC12AB0A98B00EE135C /* Streak.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

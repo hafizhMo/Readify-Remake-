@@ -37,43 +37,50 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="nem-Oj-hmY">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="nem-Oj-hmY">
                                         <rect key="frame" x="20" y="75.666666666666657" width="313" height="40"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4r-jJ-jjU">
                                                 <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="40"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="1"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1" image="checkmark" catalog="system"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fec-kS-QgU">
                                                 <rect key="frame" x="45.333333333333329" y="0.0" width="41.333333333333329" height="40"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="tinted" title="2"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="2"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBg-nX-FjN">
                                                 <rect key="frame" x="90.666666666666657" y="0.0" width="41.333333333333343" height="40"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="3"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3A-rN-rCM">
                                                 <rect key="frame" x="136" y="0.0" width="41" height="40"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="4"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="4"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LH6-Z9-sE5">
                                                 <rect key="frame" x="181" y="0.0" width="41.333333333333343" height="40"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="5"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0d-FP-73j">
                                                 <rect key="frame" x="226.33333333333331" y="0.0" width="41.333333333333314" height="40"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="6"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="6"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLv-cA-qnR">
                                                 <rect key="frame" x="271.66666666666669" y="0.0" width="41.333333333333314" height="40"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="7"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="7"/>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -291,7 +298,15 @@
                         <outlet property="bookTitleLabel" destination="mBv-ZN-0TM" id="Dio-k6-y7j"/>
                         <outlet property="circularProgressBar" destination="s27-ly-DJi" id="07a-Qo-D0w"/>
                         <outlet property="currentGoalView" destination="08N-eJ-yeX" id="a6c-yN-IzI"/>
+                        <outlet property="day1Button" destination="y4r-jJ-jjU" id="jfF-Lg-chQ"/>
+                        <outlet property="day2Button" destination="fec-kS-QgU" id="kIW-2Z-sVO"/>
+                        <outlet property="day3Button" destination="OBg-nX-FjN" id="DxG-1N-G8O"/>
+                        <outlet property="day4Button" destination="b3A-rN-rCM" id="Ita-1g-xBH"/>
+                        <outlet property="day5Button" destination="LH6-Z9-sE5" id="pdi-hg-5sY"/>
+                        <outlet property="day6Button" destination="f0d-FP-73j" id="eHv-yQ-mv7"/>
+                        <outlet property="day7Button" destination="WLv-cA-qnR" id="Iwz-wf-kyH"/>
                         <outlet property="dayAndWeekStreakLabel" destination="VT6-Du-YzQ" id="LkR-Mc-8YT"/>
+                        <outlet property="dayWeekLabel" destination="VT6-Du-YzQ" id="tQx-6I-qIt"/>
                         <outlet property="emptyGoalView" destination="5wW-G2-DRe" id="jtE-6m-x2v"/>
                         <outlet property="progressByPagesLabel" destination="ChU-1c-nt4" id="PCf-wW-9px"/>
                         <outlet property="progressPercentageLabel" destination="P29-19-LZL" id="D8E-kR-UGT"/>
@@ -833,7 +848,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="uMN-X5-8IF"/>
-        <segue reference="Crf-Yu-g4q"/>
+        <segue reference="Eav-eu-WBq"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="EmptyGoal" width="258" height="263"/>
@@ -842,6 +857,7 @@
         <image name="Reading" width="255" height="252"/>
         <image name="arrow.up.circle" catalog="system" width="128" height="123"/>
         <image name="book" catalog="system" width="128" height="99"/>
+        <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="checkmark.circle" catalog="system" width="128" height="123"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="pencil" catalog="system" width="128" height="113"/>

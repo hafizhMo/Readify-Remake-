@@ -13,6 +13,7 @@
 import UIKit
 
 protocol CurrentGoalDisplayLogic {
+  func displayStreak(viewModel: CurrentGoal.ShowStreak.ViewModel)
   func displayGoal(viewModel: CurrentGoal.ShowGoal.ViewModel)
   func displayPlaceholder()
 }
@@ -54,6 +55,15 @@ class CurrentGoalViewController: UIViewController, CurrentGoalDisplayLogic {
   @IBOutlet weak var yourProgressLabel: UILabel!
   @IBOutlet weak var dayAndWeekStreakLabel: UILabel!
   
+  @IBOutlet weak var dayWeekLabel: UILabel!
+  @IBOutlet weak var day1Button: UIButton!
+  @IBOutlet weak var day2Button: UIButton!
+  @IBOutlet weak var day3Button: UIButton!
+  @IBOutlet weak var day4Button: UIButton!
+  @IBOutlet weak var day5Button: UIButton!
+  @IBOutlet weak var day6Button: UIButton!
+  @IBOutlet weak var day7Button: UIButton!
+  
   @IBOutlet weak var currentGoalView: UIView!
   @IBOutlet weak var emptyGoalView: UIView!
   
@@ -72,6 +82,7 @@ class CurrentGoalViewController: UIViewController, CurrentGoalDisplayLogic {
   func doSomething() {
     let request = CurrentGoal.ShowGoal.Request()
     interactor?.showGoal(request: request)
+    interactor?.showStreak()
   }
   
   func displayGoal(viewModel: CurrentGoal.ShowGoal.ViewModel) {
@@ -89,5 +100,49 @@ class CurrentGoalViewController: UIViewController, CurrentGoalDisplayLogic {
     yourProgressLabel.isHidden = true
     currentGoalView.isHidden = true
     emptyGoalView.isHidden = false
+  }
+  
+  func displayStreak(viewModel: CurrentGoal.ShowStreak.ViewModel) {
+    if viewModel.items.count < 7 {
+      return
+    }
+    
+    dayWeekLabel.text = viewModel.dayAndWeek
+    day1Button.streakButton(item: viewModel.items[0])
+    day2Button.streakButton(item: viewModel.items[1])
+    day3Button.streakButton(item: viewModel.items[2])
+    day4Button.streakButton(item: viewModel.items[3])
+    day5Button.streakButton(item: viewModel.items[4])
+    day6Button.streakButton(item: viewModel.items[5])
+    day7Button.streakButton(item: viewModel.items[6])
+  }
+}
+
+extension UIButton {
+  
+  func streakButton(item: (StreakType, String)) {
+    switch item.0 {
+    case .passed:
+      setTitle("", for: .normal)
+      self.setImage(UIImage(systemName: "checkmark"), for: .normal)
+      tintColor = .systemBlue
+      backgroundColor = .systemBlue.withAlphaComponent(0.3)
+      layer.cornerRadius = 4
+      titleLabel?.font = .systemFont(ofSize: 14)
+    case .current:
+      setImage(nil, for: .normal)
+      tintColor = .white
+      backgroundColor = .systemBlue
+      layer.cornerRadius = 4
+      self.setTitle(item.1, for: .normal)
+      titleLabel?.font = .systemFont(ofSize: 14)
+    case .upcoming:
+      setImage(nil, for: .normal)
+      tintColor = .tertiaryLabel
+      backgroundColor = .quaternaryLabel
+      setTitle(item.1, for: .normal)
+      titleLabel?.font = .systemFont(ofSize: 14)
+      layer.cornerRadius = 4
+    }
   }
 }

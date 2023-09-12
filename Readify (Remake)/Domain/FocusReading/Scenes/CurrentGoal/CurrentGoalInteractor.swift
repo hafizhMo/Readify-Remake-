@@ -15,6 +15,7 @@ import Combine
 
 protocol CurrentGoalBusinessLogic {
   func showGoal(request: CurrentGoal.ShowGoal.Request)
+  func showStreak()
 }
 
 protocol CurrentGoalDataStore {}
@@ -22,6 +23,7 @@ protocol CurrentGoalDataStore {}
 class CurrentGoalInteractor: CurrentGoalBusinessLogic, CurrentGoalDataStore {
   var presenter: CurrentGoalPresentationLogic?
   var subscriber: AnyCancellable?
+  var subscriber2: AnyCancellable?
   
   func showGoal(request: CurrentGoal.ShowGoal.Request) {
     subscriber = UserDefaults.standard
@@ -34,6 +36,36 @@ class CurrentGoalInteractor: CurrentGoalBusinessLogic, CurrentGoalDataStore {
         
         let response = CurrentGoal.ShowGoal.Response(title: goal.title, total: goal.total, progress: goal.progress)
         self?.presenter?.presentGoal(response: response)
+      }
+  }
+  
+  func showStreak() {
+    subscriber2 = UserDefaults.standard
+      .publisher(for: \.streak)
+      .sink() { [weak self] streak in
+        guard let streak = streak else {
+          UserDefaults.standard.streak = Streak(day: 1)
+          return
+        }
+        
+        let day = streak.day
+        let week = (day / 7) + (day % 7 == 0 ? 0 : 1)
+        var items: [(StreakType, String)] = []
+        
+        let tempDay = day - (7 * (week - 1))
+        for i in 1...7 {
+          let realDay = String(i + (7 * (week - 1)))
+          if i < tempDay {
+            items.append((.passed, realDay))
+          } else if i == tempDay {
+            items.append((streak.latestDate == Date() ? .passed : .current, realDay))
+          } else {
+            items.append((.upcoming, realDay))
+          }
+        }
+        
+        let response = CurrentGoal.ShowStreak.Response(day: day, week: week, items: items)
+        self?.presenter?.presentStreak(response: response)
       }
   }
 }
