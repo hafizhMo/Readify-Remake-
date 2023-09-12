@@ -21,6 +21,8 @@
 		FB43005D2A9E56A100788636 /* CurrentGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4300572A9E56A100788636 /* CurrentGoalViewController.swift */; };
 		FB43005E2A9E56A100788636 /* CurrentGoalInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4300582A9E56A100788636 /* CurrentGoalInteractor.swift */; };
 		FBA6CABB2AB06B3700EE135C /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA6CABA2AB06B3700EE135C /* Goal.swift */; };
+		FBA6CABD2AB078B300EE135C /* CompleteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA6CABC2AB078B300EE135C /* CompleteInteractor.swift */; };
+		FBA6CABF2AB078E700EE135C /* CompletePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA6CABE2AB078E700EE135C /* CompletePresenter.swift */; };
 		FBB8B9092AA4E0FF00120BAD /* SharedPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB8B9082AA4E0FF00120BAD /* SharedPreference.swift */; };
 		FBB8B90E2AA4F13D00120BAD /* CreateGoalModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB8B90D2AA4F13D00120BAD /* CreateGoalModels.swift */; };
 		FBD84EBA2AA37F2800042FBF /* CreateGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD84EB92AA37F2800042FBF /* CreateGoalViewController.swift */; };
@@ -74,6 +76,8 @@
 		FB4300572A9E56A100788636 /* CurrentGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentGoalViewController.swift; sourceTree = "<group>"; };
 		FB4300582A9E56A100788636 /* CurrentGoalInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentGoalInteractor.swift; sourceTree = "<group>"; };
 		FBA6CABA2AB06B3700EE135C /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
+		FBA6CABC2AB078B300EE135C /* CompleteInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteInteractor.swift; sourceTree = "<group>"; };
+		FBA6CABE2AB078E700EE135C /* CompletePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletePresenter.swift; sourceTree = "<group>"; };
 		FBB8B9082AA4E0FF00120BAD /* SharedPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedPreference.swift; sourceTree = "<group>"; };
 		FBB8B90D2AA4F13D00120BAD /* CreateGoalModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoalModels.swift; sourceTree = "<group>"; };
 		FBD84EB92AA37F2800042FBF /* CreateGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoalViewController.swift; sourceTree = "<group>"; };
@@ -224,6 +228,8 @@
 		FB43004F2A9E4EB200788636 /* Complete */ = {
 			isa = PBXGroup;
 			children = (
+				FBA6CABC2AB078B300EE135C /* CompleteInteractor.swift */,
+				FBA6CABE2AB078E700EE135C /* CompletePresenter.swift */,
 				FBD84EBD2AA38B4F00042FBF /* CompleteViewController.swift */,
 			);
 			path = Complete;
@@ -260,9 +266,9 @@
 		FBD84EBF2AA3956400042FBF /* UpdateProgress */ = {
 			isa = PBXGroup;
 			children = (
-				FBD84EC02AA3957800042FBF /* UpdateProgressViewController.swift */,
 				FBEBE4F42AA9A7DC00439EE2 /* UpdateProgressInteractor.swift */,
 				FBEBE4F62AA9A88500439EE2 /* UpdateProgressPresenter.swift */,
+				FBD84EC02AA3957800042FBF /* UpdateProgressViewController.swift */,
 			);
 			path = UpdateProgress;
 			sourceTree = "<group>";
@@ -407,8 +413,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBA6CABD2AB078B300EE135C /* CompleteInteractor.swift in Sources */,
 				FBB8B90E2AA4F13D00120BAD /* CreateGoalModels.swift in Sources */,
 				FBB8B9092AA4E0FF00120BAD /* SharedPreference.swift in Sources */,
+				FBA6CABF2AB078E700EE135C /* CompletePresenter.swift in Sources */,
 				FBEBE4EF2AA987D800439EE2 /* FocusModeInteractor.swift in Sources */,
 				FBFE99A32AA732DF00B268D3 /* CreateGoalInteractor.swift in Sources */,
 				FBFE99A52AA733B400B268D3 /* CreateGoalPresenter.swift in Sources */,

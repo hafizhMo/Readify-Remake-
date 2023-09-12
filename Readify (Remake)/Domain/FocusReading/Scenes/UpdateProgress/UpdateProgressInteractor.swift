@@ -14,7 +14,6 @@ import UIKit
 
 protocol UpdateProgressBusinessLogic {
   func updateProgress(progress: String?)
-  func completeGoal()
 }
 
 class UpdateProgressInteractor: UpdateProgressBusinessLogic {
@@ -29,10 +28,5 @@ class UpdateProgressInteractor: UpdateProgressBusinessLogic {
     guard let goal = UserDefaults.standard.goal else { return }
     UserDefaults.standard.goal = Goal(title: goal.title, total: goal.total, timer: goal.timer, progress: value)
     presenter?.presentUpdatedCallback(message: nil)
-  }
-  
-  func completeGoal() {
-    UserDefaults.standard.goal = nil
-    presenter?.presentCompletedCallback()
   }
 }

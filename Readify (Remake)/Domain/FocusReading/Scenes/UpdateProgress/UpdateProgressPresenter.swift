@@ -14,7 +14,6 @@ import UIKit
 
 protocol UpdateProgressPresentationLogic {
   func presentUpdatedCallback(message: String?)
-  func presentCompletedCallback()
 }
 
 class UpdateProgressPresenter: UpdateProgressPresentationLogic {
@@ -22,9 +21,5 @@ class UpdateProgressPresenter: UpdateProgressPresentationLogic {
   
   func presentUpdatedCallback(message: String?) {
     viewController?.displayUpdatedCallback(message: message)
-  }
-  
-  func presentCompletedCallback() {
-    viewController?.displayCompletedCallback()
   }
 }

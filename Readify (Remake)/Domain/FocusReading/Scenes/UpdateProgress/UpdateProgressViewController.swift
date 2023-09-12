@@ -9,7 +9,6 @@ import UIKit
 
 protocol UpdateProgressDisplayLogic: NSObject {
   func displayUpdatedCallback(message: String?)
-  func displayCompletedCallback()
 }
 
 class UpdateProgressViewController: UIViewController, UpdateProgressDisplayLogic {
@@ -46,7 +45,6 @@ class UpdateProgressViewController: UIViewController, UpdateProgressDisplayLogic
   }
   
   @IBAction func didCompleteTapped(_ sender: Any) {
-    interactor?.completeGoal()
     routeToComplete()
   }
   
@@ -54,7 +52,6 @@ class UpdateProgressViewController: UIViewController, UpdateProgressDisplayLogic
     dismiss(animated: true)
   }
   
-  func displayCompletedCallback() {}
   
   private func routeToComplete() {
     if let destination = self.storyboard?.instantiateViewController(withIdentifier: "CompleteViewController") {

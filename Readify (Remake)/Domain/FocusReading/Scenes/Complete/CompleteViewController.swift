@@ -7,7 +7,12 @@
 
 import UIKit
 
-class CompleteViewController: UIViewController {
+protocol CompleteDisplayLogic: NSObjectProtocol {
+  func displayCompleted()
+}
+
+class CompleteViewController: UIViewController, CompleteDisplayLogic {
+  var interactor: CompleteBusinessLogic?
   
   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
     super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -19,11 +24,19 @@ class CompleteViewController: UIViewController {
     setup()
   }
   
-  private func setup() {}
+  private func setup() {
+    let viewController = self
+    let interactor = CompleteInteractor()
+    let presenter = CompletePresenter()
+    viewController.interactor = interactor
+    interactor.presenter = presenter
+    presenter.viewController = viewController
+  }
   
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    interactor?.completeGoal()
   }
   
   @IBAction func didBackHomeTapped(_ sender: Any) {
@@ -40,5 +53,7 @@ class CompleteViewController: UIViewController {
       self.presentingViewController?.present(destination, animated: true)
     }
   }
+  
+  func displayCompleted() {}
 }
 
