@@ -20,12 +20,21 @@ class UpdateProgressInteractor: UpdateProgressBusinessLogic {
   var presenter: UpdateProgressPresentationLogic?
   
   func updateProgress(progress: String?) {
-    guard let progress = progress, let value = Int(progress) else {
+    guard let progress = progress, let value = Int(progress), let goal = UserDefaults.standard.goal else {
       presenter?.presentUpdatedCallback(message: "Progress field still empty!")
       return
     }
     
-    guard let goal = UserDefaults.standard.goal else { return }
+    if value > goal.total {
+      presenter?.presentUpdatedCallback(message: "There's only \(goal.total) pages")
+      return
+    }
+    
+    if value == goal.total {
+      presenter?.presentCompleted()
+      return
+    }
+    
     UserDefaults.standard.goal = Goal(title: goal.title, total: goal.total, timer: goal.timer, progress: value)
     presenter?.presentUpdatedCallback(message: nil)
   }

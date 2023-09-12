@@ -9,6 +9,7 @@ import UIKit
 
 protocol UpdateProgressDisplayLogic: NSObject {
   func displayUpdatedCallback(message: String?)
+  func displayCompleted()
 }
 
 class UpdateProgressViewController: UIViewController, UpdateProgressDisplayLogic {
@@ -38,6 +39,7 @@ class UpdateProgressViewController: UIViewController, UpdateProgressDisplayLogic
     super.viewDidLoad()
   }
   
+  @IBOutlet weak var errorLabel: UILabel!
   @IBOutlet weak var progressTextField: UITextField!
   
   @IBAction func didUpdateProgressTapped(_ sender: Any) {
@@ -49,9 +51,18 @@ class UpdateProgressViewController: UIViewController, UpdateProgressDisplayLogic
   }
   
   func displayUpdatedCallback(message: String?) {
-    dismiss(animated: true)
+    guard let message = message else {
+      dismiss(animated: true)
+      return
+    }
+    
+    errorLabel.isHidden = false
+    errorLabel.text = message
   }
   
+  func displayCompleted() {
+    routeToComplete()
+  }
   
   private func routeToComplete() {
     if let destination = self.storyboard?.instantiateViewController(withIdentifier: "CompleteViewController") {
