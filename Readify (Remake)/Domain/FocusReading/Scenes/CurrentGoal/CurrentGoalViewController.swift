@@ -125,14 +125,14 @@ extension UIButton {
     case .passed:
       setTitle("", for: .normal)
       self.setImage(UIImage(systemName: "checkmark"), for: .normal)
-      tintColor = .systemBlue
-      backgroundColor = .systemBlue.withAlphaComponent(0.3)
+      tintColor = UIColor(named: "PrimaryColor")
+      backgroundColor = UIColor(named: "SecondaryColor")
       layer.cornerRadius = 4
       titleLabel?.font = .systemFont(ofSize: 14)
     case .current:
       setImage(nil, for: .normal)
       tintColor = .white
-      backgroundColor = .systemBlue
+      backgroundColor = UIColor(named: "PrimaryColor")
       layer.cornerRadius = 4
       self.setTitle(item.1, for: .normal)
       titleLabel?.font = .systemFont(ofSize: 14)
