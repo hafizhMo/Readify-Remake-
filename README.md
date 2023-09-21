@@ -7,7 +7,9 @@ Readify is a native iOS App that solves college student reading habit by buildin
 - UIKit (Storyboard + Xib)
 - UserDefault
 - VIP🆕
-- Unit Testing🆕
+- Unit Testing (coming soon)
+- CoreData (coming soon)
+- Gamification (coming soon)
 
 ## License 🍺
 
